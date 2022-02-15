@@ -1,0 +1,63 @@
+//** BACKGROUNDS **\\
+
+@mixin background-settings {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;   
+}
+  
+.home {
+    @include background-settings;
+    @media screen and (max-width: $breakpoint-desktop-max) {
+        background-image: url("../../public/media/home/background-home-desktop.jpg");         
+    }
+    @media screen and (max-width: $breakpoint-tablet-max) {
+        background-image: url("../../public/media/home/background-home-tablet.jpg");         
+    }
+    @media screen and (max-width: $breakpoint-mobile-max) {
+        background-image: url("../../public/media/home/background-home-mobile.jpg");         
+    }
+}
+.destination {
+    @include background-settings;
+    @media screen and (max-width: $breakpoint-desktop-max) {
+        background-image: url("../../public/media/destination/background-destination-desktop.jpg");         
+    }
+    @media screen and (max-width: $breakpoint-tablet-max) {
+        background-image: url("../../public/media/destination/background-destination-tablet.jpg");         
+    }
+    @media screen and (max-width: $breakpoint-mobile-max) {
+        background-image: url("../../public/media/destination/background-destination-mobile.jpg");         
+    }
+}
+
+.crew {
+    @include background-settings;
+    @media screen and (max-width: $breakpoint-desktop-max) {
+        background-image: url("../../public/media/crew/background-crew-desktop.jpg");         
+    }
+    @media screen and (max-width: $breakpoint-tablet-max) {
+        background-image: url("../../public/media/crew/background-crew-tablet.jpg");         
+    }
+    @media screen and (max-width: $breakpoint-mobile-max) {
+        background-image: url("../../public/media/crew/background-crew-mobile.jpg");         
+    }
+}
+
+.technology {
+    @include background-settings;
+    @media screen and (max-width: $breakpoint-desktop-max) {
+        background-image: url("../../public/media/technology/background-technology-desktop.jpg");         
+    }
+    @media screen and (max-width: $breakpoint-tablet-max) {
+        background-image: url("../../public/media/technology/background-technology-tablet.jpg");         
+    }
+    @media screen and (max-width: $breakpoint-mobile-max) {
+        background-image: url("../../public/media/technology/background-technology-mobile.jpg");         
+    }
+}

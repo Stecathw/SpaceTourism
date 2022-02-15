@@ -1,0 +1,42 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+    .destination {
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+                "image description";
+            .planet-image {
+                grid-area: "image";
+                display: grid;
+                grid-template-rows: auto 1fr;
+                grid-column: auto;
+                grid-template-areas: 
+                    "title" 
+                    "planet";
+                .title {
+                    grid-area: "title";
+                    justify-self: center;
+                    transform: translateX(toRem(28px));
+                    span {
+                        padding-right: toRem(28px);
+                        opacity: 0.25;
+                    }
+                }
+                .image {
+                    grid-area: "planet";
+                    justify-self: end;
+                    align-self: center;
+                    img {
+                        height: 445px;
+                        width: 445px;
+                    }
+                }
+            }
+
+            .planet-description {
+                grid-area: "description";
+            }
+        }
+    }
+}

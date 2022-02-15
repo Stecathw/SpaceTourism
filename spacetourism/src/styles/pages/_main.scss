@@ -1,0 +1,16 @@
+/// MAIN DISPLAY FOR ALL PAGES
+
+/// GROUPS NAVBAR + PAGEs CONTENT UNDER MAIN.
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    .home, .destination {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr; // auto : adjust to navbar height and let page content fill rest of page
+        grid-template-areas: 
+            "nav" 
+            "page";
+    }
+}

@@ -1,0 +1,169 @@
+// Typography & colors
+
+@use 'sass:math';
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+$font-1: 'Bellefair', regular;
+$font-2: 'Barlow Condensed', regular;
+$font-3: 'Barlow', sans-serif;
+
+$color-1: #0B0D17;
+$color-2: #D0D6F9;
+$color-3: #FFFFFF;
+
+$breakpoint-desktop-max: 2400px;
+$breakpoint-tablet-max: 950px;
+$breakpoint-mobile-max: 540px;
+
+@function toRem($value) {
+    @return math.div($value, 16px) * 1rem;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+h1, h2, h3, h4 ,h5, ul, li {
+    margin : 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: $font-1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: toRem(150px);
+    line-height: toRem(172px);
+    color: $color-3;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: $font-1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 115px;
+    color: $color-3;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: $font-1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 64px;
+    color: $color-3;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: $font-1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    color: $color-3;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-family: $font-2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+    color: $color-2;
+}
+
+.subheading-1 {
+    font-family: $font-1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $color-3;
+}
+
+.subheading-2 {
+    font-family: $font-2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    text-transform: uppercase;
+    color: $color-3;
+}
+
+.nav-text {
+    font-family: $font-1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    color: $color-3;
+}
+
+p {
+    font-family: $font-3;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    color: $color-3;
+}
+
+li {
+    list-style-type: none;
+}
+
+// Custom properties
+
+@mixin FlexCentered {
+    display : flex; 
+    justify-content: center;
+    align-items: center;  
+}
+
+@mixin Hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+@mixin Active {
+    cursor: default;
+    border-bottom: 3px solid $color-3; 
+}
+
+@mixin nav-text {
+    font-family: $font-2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;            
+    text-transform: uppercase;
+}
+
+hr {
+    padding:0;
+    margin: 0;
+}

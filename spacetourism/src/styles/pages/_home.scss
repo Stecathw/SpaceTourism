@@ -1,0 +1,166 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+    .home {
+        .content {
+            grid-area: "page";
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 1fr;
+            grid-template-areas: "intro" "explore";
+            align-items: flex-end;
+            padding-bottom: toRem(131px);
+            .homeIntroduction {
+                grid-area: "intro";
+                display: grid;
+                width: toRem(450px);
+                justify-self: center;
+                h5 {
+                    padding-bottom: toRem(24px);
+                }
+            }          
+            .buttonExplore {
+                grid-area: "explore";
+                display: grid;
+                align-items: end;
+                justify-content: center;
+                
+                .buttonIdleCircle {
+                    height: 274px;
+                    width: 274px;
+                    a {
+                        text-decoration: none;
+                    }
+                    .circle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        width: 100%;
+                        background-color: $color-3;
+                        border-radius: 50%;
+                        z-index : 3;                      
+                        h4 {
+                            text-align: center;
+                            letter-spacing: 1.25px;
+                            color: #0B0D17;
+                        }
+                    }
+                    .circle:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0px 0px 0px 88px rgb(0 0 0 / 75%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+    .home {        
+        .content {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;      
+            .homeIntroduction {
+                grid-area: "intro";
+                display : grid;
+                justify-items: center;
+                align-content: center;                
+                text-align: center;
+                h1 {
+                    line-height: 150px;
+                    
+                }
+                h5 {
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: 3.375px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: $color-2;                    
+                    padding: 0 1%;
+                }
+            }
+            .buttonExplore {
+                grid-area: "explore";
+                display: grid;
+                justify-items: center;
+                align-content: center;                
+                .buttonIdleCircle {
+                    height: 242px;
+                    width: 242px;
+                }
+            }        
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+    .home {        
+        display: grid;    
+        grid-template-columns: 1fr;
+        grid-template-rows: 116px auto;
+        grid-template-areas: 
+            "nav" 
+            "page";   
+        
+        .navBar {
+            display: flex;
+        }
+        .content {       
+            grid-area: "page";
+            display: grid;
+            width: 100%;
+            padding-top: 0;
+            .homeIntroduction {
+                width: inherit;
+
+                h5 {
+                    font-size: 16px;
+                    line-height: 19px;
+                    letter-spacing: 2.7px;
+                    padding-bottom: 16px;
+                }
+                h1 {
+                    font-size: 80px;
+                    line-height: 100px;                   
+                }
+                p {
+                    font-size: 15px !important;
+                    line-height: 25px !important;                   
+                    margin: 0;
+                    padding: 0 24px;
+                }
+            }
+            .buttonExplore {
+                height: 100%;
+                // width: inherit; //fix to make width equal to screen
+                grid-area: "explore";
+                display: grid;
+                justify-items: center;
+                align-content: center;
+                .buttonIdleCircle {
+                    height: 150px;
+                    width: 150px;
+                    .circle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        width: 100%;
+                        background-color: $color-3;
+                        border-radius: 50%;
+                        z-index : 3;
+                        h4 {
+                            font-size: 20px;
+                            line-height: 23px;
+                            text-align: center;
+                            color: #0B0D17;
+                        }
+                    }
+                }
+            }        
+        }
+    }
+}

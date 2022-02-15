@@ -1,0 +1,8 @@
+@import './global-settings';
+@import './background-settings';
+@import './components/nav';
+
+// PAGES
+@import './pages/main'; // driving general display with navbar and content own page
+@import './pages/home';
+@import './pages/destination';
