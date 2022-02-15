@@ -58,10 +58,11 @@ Created folder for Sass styling.
 
 4 - Started sass setting up.
 
-5 - Written Nav component. Faced problems with the underlignement (active and hover) and the left numbers. I was first going to make a CSS counter but wasnt working with with '<a>' tag text decoration, so I kept hard coded value into my component and kept playing with underligne text decoration... until I discovered there was a gap in the underlignement between number and title. In fact, there was two distinct underligne but almost unvisible without zooming in. 
-So came back to the counter flag and before option playing bottom border. Better !
+5 - Written Nav component. 
 
 6 - Making styles of Nav component.
+
+7 - Written home page
 
 ### Built with
 
