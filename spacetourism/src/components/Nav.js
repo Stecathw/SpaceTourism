@@ -32,16 +32,16 @@ function Nav() {
         <nav className='navLinks'>
             <ul>
                 <li>
-                    <NavLink to="/" className='navLink' activeClassName='active'>Home</NavLink>
+                    <NavLink to="/" className='navLink' activeclassname='active'>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/destination" className='navLink' activeClassName='active'>Destination</NavLink>
+                    <NavLink to="/destination" className='navLink' activeclassname='active'>Destination</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/crew" className='navLink' activeClassName='active'>Crew</NavLink>
+                    <NavLink to="/crew" className='navLink' activeclassname='active'>Crew</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/technology" className='navLink' activeClassName='active'>Technology</NavLink>
+                    <NavLink to="/technology" className='navLink' activeclassname='active'>Technology</NavLink>
                 </li>
             </ul>
         </nav>

@@ -1,0 +1,28 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+    .title {
+        padding-left: toRem(165px);
+        transform: translateX(toRem(28px));
+        padding-top: toRem(76px);
+        h5 {
+            color: $color-3;
+            span {
+                padding-right: toRem(28px);
+                opacity: 0.25;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+     .title {
+        padding-left: 0 !important;        
+        padding-top: toRem(40px);
+        padding-bottom: 60px;
+        h5 {
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 3.375px;
+        }
+    }
+}
+

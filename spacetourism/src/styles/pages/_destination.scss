@@ -1,42 +1,57 @@
+
 @media screen and (max-width: $breakpoint-desktop-max) {
     .destination {
+        .title {
+            grid-area: "title";
+            @import '../components/title';
+        }
         .content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
             grid-template-areas: 
-                "image description";
+                "image content";
+
             .planet-image {
                 grid-area: "image";
-                display: grid;
-                grid-template-rows: auto 1fr;
-                grid-column: auto;
-                grid-template-areas: 
-                    "title" 
-                    "planet";
-                .title {
-                    grid-area: "title";
-                    justify-self: center;
-                    transform: translateX(toRem(28px));
-                    span {
-                        padding-right: toRem(28px);
-                        opacity: 0.25;
-                    }
-                }
-                .image {
-                    grid-area: "planet";
-                    justify-self: end;
-                    align-self: center;
-                    img {
-                        height: 445px;
-                        width: 445px;
-                    }
-                }
+                @import '../components/destinations/image';
+                align-self: center;
+                justify-self: end;
             }
-
-            .planet-description {
-                grid-area: "description";
+            .planet-content {
+                grid-area: 
+                "content";
+                align-self: center;
+                justify-self: center;
+                .box {
+                    width: 30vw;
+                    @import '../components/destinations/tabMenu';
+                    @import '../components/destinations/description';
+                }
             }
         }
     }
+}
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+    .destination {
+        .content {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            grid-template-areas: 
+                "image"
+                "content";
+            .planet-image {
+                justify-self: center;
+            }
+            .planet-content {
+                .box {
+                    width: 100%;
+                    display: grid;
+                    justify-items: center;
+                    text-align-last: center;                    
+                }
+            }
+        }
+    }    
 }

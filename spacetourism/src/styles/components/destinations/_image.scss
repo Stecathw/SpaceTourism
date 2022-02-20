@@ -1,0 +1,27 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+     .image {
+          img {
+               // height: auto;
+               // max-width: 100%;
+               animation: rotating 240s linear infinite;
+          }
+          @keyframes rotating {
+              0% { 
+                  transform: rotate(0); 
+              }
+              100% { 
+                  transform: rotate(360deg);
+              }
+          }
+     }
+}
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+     .image {
+          img {
+               height: auto;
+               max-width: 300px;
+          }
+     }
+}
+

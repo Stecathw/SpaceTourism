@@ -1,7 +1,14 @@
 @media screen and (max-width: $breakpoint-desktop-max) {
     .home {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+            "nav"
+            "page";
         .content {
-            grid-area: "page";
+            grid-area: 
+            "page";
             display: grid;
             grid-template-columns: auto auto;
             grid-template-rows: 1fr;
@@ -37,16 +44,27 @@
                         width: 100%;
                         background-color: $color-3;
                         border-radius: 50%;
-                        z-index : 3;                      
+                        z-index : 3; 
+
+                        animation-duration: 3s;
+                        animation-name: clignoter;
+                        animation-iteration-count: infinite;
+                        transition: ease-in-out;   
+
                         h4 {
                             text-align: center;
                             letter-spacing: 1.25px;
                             color: #0B0D17;
                         }
                     }
+                    @keyframes clignoter {
+                        0%   { transform: perpective(150px) scale3D(1, 0.5, 20) translateZ(100px)}
+
+                        100% { transform: perpective(200px) scale3D(2, 2, 20) translateZ(-100px)}
+                    }
                     .circle:hover {
                         transform: scale(1.05);
-                        box-shadow: 0px 0px 0px 88px rgb(0 0 0 / 75%);
+                        box-shadow: 0px 0px 0px 88px rgb(255 255 255 / 10%);
                     }
                 }
             }
@@ -113,6 +131,8 @@
             display: grid;
             width: 100%;
             padding-top: 0;
+            padding-bottom: 0;
+            align-items: center;
             .homeIntroduction {
                 width: inherit;
 

@@ -52,17 +52,29 @@ Deleted all useless things bring by create-react-app process.
 
 2 - Created folder for pages Home/Destination/Crew/Technology and implemented four navigations routes.
 Created folder for components and created main Nav component.
-Created folder for Sass styling.
+Created main folder for Sass styling.
 
 3 - Written html home page before applying first stylesheets with saas later and have some direct viewable feedback.
 
-4 - Started sass setting up.
+4 - Started sass setting up. Created a _globa-settings and _background-settings for convenience and ease of setting up general styles. 
 
 5 - Written Nav component. 
 
 6 - Making styles of Nav component.
 
-7 - Written home page
+7 - Written home page with styles
+
+8 - Written destinations page with styles
+
+9 - Written crew page with styles
+
+10 - Written Technology page with styles
+
+11 - Refactored Home page with useContext hook to manage state between tabs and page description/image. Helps to make break page into more components.
+So now for each pages there will be anoter util folder with a Context.js and GetData?js file.
+
+12 - While breaking apparts into more components, restyled components. Breaking apparts components + styles makes things easier to work on (litle by little, one by one) and I hope it will keep things more organised with a better architecture and moreover makes life easier while working with responsiveness later on my process. (even if I've already written some media queries, it's now more about rewritting things)
+
 
 ### Built with
 
@@ -110,7 +122,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Example resource 2](https://css-tricks.com/snippets/css/complete-guide-grid/) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 

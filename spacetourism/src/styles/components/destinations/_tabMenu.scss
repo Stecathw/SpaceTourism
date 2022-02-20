@@ -1,0 +1,41 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+    .menu {                        
+        width: 20vw;
+        height: toRem(34px);
+        ul {
+            height: calc(100% - 3px);
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            li {
+                height: 100%;
+                span {
+                    font-family: Barlow Condensed;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 19px;
+                    letter-spacing: 2.7px;
+                    color: #D0D6F9;
+                    text-transform: uppercase;
+                }
+            }
+            .active {
+                border-bottom: 3px solid white;
+                span {
+                    color: $color-3;
+                }
+            }
+            li:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+    .menu {
+        width: 285.5px;
+    }
+}

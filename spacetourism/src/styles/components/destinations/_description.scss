@@ -1,0 +1,56 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+     .planet-infos {
+          padding-top: toRem(37px);
+          p {
+              margin-top: 14px;
+              margin-bottom: 54px;
+
+          }
+          hr {
+              height: 1px;
+              border: unset;
+              background-color: $color-3;
+              opacity: 0.25;
+              width: 100%;
+          }
+          .numbers {
+              margin-top: toRem(28px);
+              display: grid;
+              grid-template-rows: 1fr;
+              grid-template-columns: auto auto;
+              justify-items: flex-start;
+              .header {
+                  margin-bottom: toRem(14px);
+                  color: #D0D6F9;
+              }
+          }
+     }
+}
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+     .planet-infos {
+          padding-top: toRem(32px);
+          padding-right: 98px;
+          padding-left: 98px;
+          h2 {
+               font-size: 80px;
+               line-height: 92px;
+          }
+          p {
+               margin-top: 8px;
+               margin-bottom: 49px;
+               font-size: 16px;
+               line-height: 28px;
+               text-align: justify;
+          }
+          .numbers {
+               justify-items: center;
+          }
+     }
+}
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+     .planet-infos {
+          overflow-y: scroll;
+     }
+}

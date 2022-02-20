@@ -14,8 +14,8 @@ $color-1: #0B0D17;
 $color-2: #D0D6F9;
 $color-3: #FFFFFF;
 
-$breakpoint-desktop-max: 2400px;
-$breakpoint-tablet-max: 950px;
+$breakpoint-desktop-max: 3000px;
+$breakpoint-tablet-max: 1050px;
 $breakpoint-mobile-max: 540px;
 
 @function toRem($value) {
@@ -33,7 +33,10 @@ html, body {
     padding: 0;
 }
 
-
+img {
+    max-width: 100%;
+    display: block;
+}
 
 h1, h2, h3, h4 ,h5, ul, li {
     margin : 0;
@@ -129,7 +132,7 @@ p {
     font-weight: normal;
     font-size: 18px;
     line-height: 32px;
-    color: $color-3;
+    color: $color-2;
 }
 
 li {
