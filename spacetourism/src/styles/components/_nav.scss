@@ -9,12 +9,9 @@
         height: toRem(96px);
         padding-left: toRem(55px);
         padding-top: toRem(40px);
-        .hamburgerMenu {  
-            display: none;
-        }
-        .mobileNav {
-            display: none;
-        }
+        // .hamburgerMenu {  
+        //     display: none;
+        // }
         .navLogo {
             grid-area: "1";
             
@@ -81,6 +78,9 @@
             }
         }
     }
+    // .mobile {
+    //     display: none;
+    // }
 }
 
 @media screen and (max-width: $breakpoint-tablet-max) {
@@ -111,6 +111,7 @@
 
 @media screen and (max-width: $breakpoint-mobile-max) {
     .navBar {
+        height: 100%;
         align-items: center;
         padding: 0;        
         justify-content: space-between;
@@ -118,103 +119,58 @@
             display: none;
         }
         .navLogo {
-            padding-left: toRem(24px);
-        }
-        .hamburgerMenu { 
-
-            // grid-area: "3"; 
-            display: flex;
-            align-self: center;         
-            justify-self: flex-end;
-            padding-right: toRem(24px);
-
-            img {       
-                width: 24px;
-                height: 21px;
-                z-index: 3;
-            }
-        }
+            display: none;
+            // padding-left: toRem(24px);
+        } 
         .mobileNav { 
-            display: none; 
-            // grid-area: "1";
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-between; 
-            // #close { 
-            //     display: none;
-                // position : absolute;
-                // right: 0;
-                // top: 0;      
-                // width: 24px;
-                // height: 24px;
-                // padding-top: 36px;
-                // padding-right: 24px;
-                // z-index: 3;
-            // }      
-            // .mobileNavLogo{
-            //     align-self: center;
-            //     justify-self: flex-start;
-            //     display: flex;
-
-            // }
-
-            .navLinksMobile {                
-                display: none;   
-                // position: absolute;
-                // right: 0;
-                // width: 66%;
-                // height: 100%;
-                // background: rgba(255, 255, 255, 0.04);
-                // backdrop-filter: blur(81.5485px); 
-                // padding-top: 118px; 
-                // padding-left: 32px;              
-
-                // ul {   
-
-                //     display: flex;
-                //     flex-direction: column;
-                //     align-items: flex-start;                    
-                //     padding: 0;
-                //     width: 100%;
-                //     counter-reset: navlinks;            
-                //     li {   
-                //         padding-bottom: 32px;                        
-                //         width: 100%;
-                //         a {
-                //             display: flex;
-                //             width: calc(100% - 4px);
-                //             color: $color-3;
-
-                //             text-decoration: none;
-                //             padding: 0.4rem 0rem;
-
-                //         }
-                //         a::before {
-                //             counter-increment: navlinks;
-                //             content: "0"counter(navlinks);
-                //             font-weight: bold;
-                //             padding-right: 12px;
-                //         }
-                //         .navLink {                                             
-                //             // @include nav-text;
-                //             font-family: Barlow Condensed;
-                //             font-style: normal;
-                //             font-weight: normal;
-                //             font-size: 16px;
-                //             line-height: 19px;
-                //             letter-spacing: 2.7px;
-                //             text-transform: uppercase;             
-
-                //         }
-                //         .active {
-                //             border-right: 4px solid $color-3;
-                //         }
-                //     }
-                //     li:first-child {
-                //         counter-set: navlinks  -1;
-                //     }
-                // }    
+            padding-top: toRem(118px); 
+            padding-left: toRem(32px);
+    
+            ul {   
+    
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;                    
+                padding: 0;
+                width: 100%;
+                counter-reset: navlinks;            
+                li {   
+                    padding-bottom: 32px;                        
+                    width: 100%;
+                    a {
+                        display: flex;
+                        width: calc(100% - 4px);
+                        color: $color-3;
+    
+                        text-decoration: none;
+                        padding: 0.4rem 0rem;
+    
+                    }
+                    a::before {
+                        counter-increment: navlinks;
+                        content: "0"counter(navlinks);
+                        font-weight: bold;
+                        padding-right: 12px;
+                    }
+                    .navLink {                                             
+                        // @include nav-text;
+                        font-family: Barlow Condensed;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 2.7px;
+                        text-transform: uppercase;             
+    
+                    }
+                    .active {
+                        border-right: 4px solid $color-3;
+                    }
+                }
+                li:first-child {
+                    counter-set: navlinks  -1;
+                }
             }
-        }          
+        }      
     }
 }

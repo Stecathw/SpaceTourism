@@ -25,3 +25,15 @@
      }
 }
 
+@media screen and (max-width: $breakpoint-mobile-max) {
+     .image {
+          padding-top: 32px;
+          // padding-bottom: 26px;
+          img {
+               height: auto;
+               max-width: 170px;
+               
+          }
+     }
+}
+

@@ -8,10 +8,22 @@
     .destination, .crew, .technology {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr; // auto : adjust to navbar height and let page content fill rest of page
+        grid-template-rows: 116px auto 1fr; // auto : adjust to navbar height and let page content fill rest of page
         grid-template-areas: 
             "nav" 
             "title"
             "page";
     }
+}
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+    .main {
+
+        .destination, .crew, .technology {
+            -webkit-overflow-scrolling: touch;
+            overflow-x: hidden;
+            overflow-y: auto;
+            grid-template-rows: 88px auto 1fr;
+        }
+    }    
 }

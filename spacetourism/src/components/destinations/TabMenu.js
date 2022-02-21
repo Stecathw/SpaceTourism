@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 
 import { PlanetContext } from './util/Context';
 
@@ -18,10 +18,11 @@ function TabMenu( { allDest }) {
           setActiveIndex(btnID)
      }
 
+
      return (
           <div className="menu">
                <ul>
-                    {destinations.map((destination, _index) => {
+                    {destinations.map((destination, _index) => {                         
                          return (
                               <li 
                                    onClick={() => handleClick(destination.name, _index)}

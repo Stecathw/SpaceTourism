@@ -19,6 +19,9 @@
               grid-template-rows: 1fr;
               grid-template-columns: auto auto;
               justify-items: flex-start;
+              h5 {
+                   letter-spacing: 1px;
+              }
               .header {
                   margin-bottom: toRem(14px);
                   color: #D0D6F9;
@@ -51,6 +54,25 @@
 
 @media screen and (max-width: $breakpoint-mobile-max) {
      .planet-infos {
-          overflow-y: scroll;
+          padding-top: toRem(20px);
+          padding-right: 24px;
+          padding-left: 24px;
+          h2 {
+               font-size: 56px;
+               line-height: 64px;
+          }
+          p {
+               margin-top: 1px;
+               margin-bottom: 32px;
+               font-size: 15px;
+               line-height: 25px; 
+          }
+          .numbers {
+               grid-template-rows: 1fr 1fr;
+               grid-template-columns: auto;
+               grid-row-gap: 32px;
+               justify-items: center;
+               padding-bottom: 58px;
+          }
      }
 }

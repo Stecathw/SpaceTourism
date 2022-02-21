@@ -9,6 +9,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
+            
             grid-template-areas: 
                 "image content";
 
@@ -19,8 +20,7 @@
                 justify-self: end;
             }
             .planet-content {
-                grid-area: 
-                "content";
+                grid-area: "content";
                 align-self: center;
                 justify-self: center;
                 .box {
@@ -38,6 +38,7 @@
         .content {
             grid-template-columns: 1fr;
             grid-template-rows: auto 1fr;
+            grid-row-gap: 53px;
             grid-template-areas: 
                 "image"
                 "content";
@@ -45,6 +46,7 @@
                 justify-self: center;
             }
             .planet-content {
+                align-self: start;
                 .box {
                     width: 100%;
                     display: grid;
@@ -55,3 +57,12 @@
         }
     }    
 }
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+    .destination {
+        .content {
+            grid-row-gap: 26px;
+        }
+    }
+}
+

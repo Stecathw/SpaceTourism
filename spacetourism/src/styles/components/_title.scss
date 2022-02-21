@@ -15,8 +15,9 @@
 
 @media screen and (max-width: $breakpoint-tablet-max) {
      .title {
-        padding-left: 0 !important;        
+        padding-left: 38.5px !important;        
         padding-top: toRem(40px);
+        transform: translateX(0);
         padding-bottom: 60px;
         h5 {
             font-size: 20px;
@@ -24,5 +25,22 @@
             letter-spacing: 3.375px;
         }
     }
+}
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+    .title {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        
+        padding-left: 0 !important;        
+        padding-top: 24px;
+        padding-bottom: 0;//32px;
+       h5 {
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 2.7px;
+       }
+   }
 }
 

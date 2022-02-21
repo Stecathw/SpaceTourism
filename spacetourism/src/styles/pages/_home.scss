@@ -14,12 +14,13 @@
             grid-template-rows: 1fr;
             grid-template-areas: "intro" "explore";
             align-items: flex-end;
-            padding-bottom: toRem(131px);
+            
             .homeIntroduction {
                 grid-area: "intro";
                 display: grid;
                 width: toRem(450px);
                 justify-self: center;
+                padding-bottom: 14vh;
                 h5 {
                     padding-bottom: toRem(24px);
                 }
@@ -28,45 +29,9 @@
                 grid-area: "explore";
                 display: grid;
                 align-items: end;
-                justify-content: center;
-                
-                .buttonIdleCircle {
-                    height: 274px;
-                    width: 274px;
-                    a {
-                        text-decoration: none;
-                    }
-                    .circle {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        height: 100%;
-                        width: 100%;
-                        background-color: $color-3;
-                        border-radius: 50%;
-                        z-index : 3; 
-
-                        animation-duration: 3s;
-                        animation-name: clignoter;
-                        animation-iteration-count: infinite;
-                        transition: ease-in-out;   
-
-                        h4 {
-                            text-align: center;
-                            letter-spacing: 1.25px;
-                            color: #0B0D17;
-                        }
-                    }
-                    @keyframes clignoter {
-                        0%   { transform: perpective(150px) scale3D(1, 0.5, 20) translateZ(100px)}
-
-                        100% { transform: perpective(200px) scale3D(2, 2, 20) translateZ(-100px)}
-                    }
-                    .circle:hover {
-                        transform: scale(1.05);
-                        box-shadow: 0px 0px 0px 88px rgb(255 255 255 / 10%);
-                    }
-                }
+                justify-content: center; 
+                padding-bottom: 14.5vh;               
+                @import '../components/home/button';
             }
         }
     }
@@ -77,25 +42,28 @@
     .home {        
         .content {
             grid-template-columns: 1fr;
-            grid-template-rows: auto auto;      
+            grid-template-rows: auto auto;   
             .homeIntroduction {
                 grid-area: "intro";
                 display : grid;
                 justify-items: center;
                 align-content: center;                
                 text-align: center;
+                align-self: start;
+                padding-bottom: 0;
+                padding-top: 11.5vh;
                 h1 {
-                    line-height: 150px;
+                    line-height: toRem(150px);
                     
                 }
                 h5 {
-                    font-size: 20px;
-                    line-height: 24px;
-                    letter-spacing: 3.375px;
+                    font-size: toRem(20px);
+                    line-height: toRem(24px);
+                    letter-spacing: toRem(3.375px);
                 }
                 p {
-                    font-size: 16px;
-                    line-height: 28px;
+                    font-size: toRem(16px);
+                    line-height: toRem(28px);
                     color: $color-2;                    
                     padding: 0 1%;
                 }
@@ -104,11 +72,8 @@
                 grid-area: "explore";
                 display: grid;
                 justify-items: center;
-                align-content: center;                
-                .buttonIdleCircle {
-                    height: 242px;
-                    width: 242px;
-                }
+                align-content: center;  
+                padding-bottom: 10vh;            
             }        
         }
     }
@@ -121,8 +86,7 @@
         grid-template-rows: 116px auto;
         grid-template-areas: 
             "nav" 
-            "page";   
-        
+            "page";     
         .navBar {
             display: flex;
         }
@@ -132,54 +96,35 @@
             width: 100%;
             padding-top: 0;
             padding-bottom: 0;
-            align-items: center;
+
             .homeIntroduction {
                 width: inherit;
-
+                align-self: center;              
+                padding-bottom: 0;
+                padding-top: 0;
                 h5 {
-                    font-size: 16px;
-                    line-height: 19px;
-                    letter-spacing: 2.7px;
-                    padding-bottom: 16px;
+                    font-size: toRem(16px);
+                    line-height: toRem(19px);
+                    letter-spacing: toRem(2.7px);
+                    padding-bottom: toRem(16px);
                 }
                 h1 {
-                    font-size: 80px;
-                    line-height: 100px;                   
+                    font-size: toRem(80px);
+                    line-height: toRem(100px);                   
                 }
                 p {
-                    font-size: 15px !important;
-                    line-height: 25px !important;                   
+                    font-size: toRem(15px);
+                    line-height: toRem(25px);                  
                     margin: 0;
-                    padding: 0 24px;
+                    padding: 0 toRem(24px);
                 }
             }
             .buttonExplore {
-                height: 100%;
-                // width: inherit; //fix to make width equal to screen
                 grid-area: "explore";
                 display: grid;
                 justify-items: center;
                 align-content: center;
-                .buttonIdleCircle {
-                    height: 150px;
-                    width: 150px;
-                    .circle {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        height: 100%;
-                        width: 100%;
-                        background-color: $color-3;
-                        border-radius: 50%;
-                        z-index : 3;
-                        h4 {
-                            font-size: 20px;
-                            line-height: 23px;
-                            text-align: center;
-                            color: #0B0D17;
-                        }
-                    }
-                }
+                padding-bottom: 7vh;
             }        
         }
     }

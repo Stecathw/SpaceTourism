@@ -1,13 +1,11 @@
 import React from 'react';
 import Nav from '../components/Nav';
 
-import { Link } from 'react-router-dom';
-
+// import { Link } from 'react-router-dom';
+import Button from '../components/home/Button'
 
 function Home() {
     return (
-                    
-        // <div className="home">
         <div className="home">
             <Nav/>
             <div className="content">            
@@ -21,14 +19,7 @@ function Home() {
                     </p>                
                 </div>
                 <div className="buttonExplore">
-                        <div className="buttonIdleCircle"> 
-                        <Link to="/destination"> 
-                            <div className='circle'>
-                                <h4>Explore</h4>                             
-                            </div>  
-                        </Link>                                               
-                        </div> 
-                                                                                                                  
+                    <Button />                                                                                                                   */}
                 </div>
             </div>
         </div>

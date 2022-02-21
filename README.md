@@ -73,25 +73,29 @@ Created main folder for Sass styling.
 11 - Refactored Home page with useContext hook to manage state between tabs and page description/image. Helps to make break page into more components.
 So now for each pages there will be anoter util folder with a Context.js and GetData?js file.
 
-12 - While breaking apparts into more components, restyled components. Breaking apparts components + styles makes things easier to work on (litle by little, one by one) and I hope it will keep things more organised with a better architecture and moreover makes life easier while working with responsiveness later on my process. (even if I've already written some media queries, it's now more about rewritting things)
+12 - While breaking apparts into more components, I've restyled components. Breaking apparts components + styles makes things easier to work on (litle by little, one by one) and I hope it will keep things more organised with a better architecture and moreover makes life easier while working with responsiveness later on my process. (even if I've already written some media queries, it's now more about rewritting things) => Its now possible to focus only on one components and its behavior.
+
+13 - Came back on home page and worked mobile menu. I've installed styled-components, https://styled-components.com/docs/basics and implemented my mobile menu using https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/. By the way one of my favourite ressources when building frontend things.
+Used this tutorial to make things faster and easier. I want to focus more on responsive stuff.
 
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
+- Sass
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I've learned one more hook : useContext along with CreateContext and Provider Context. (Redux was a bit too much for this app)
+As I've many times faced trouble when managing states while breaking aparts a page into components I need useContext to makes things easier but not to complex. 
+So every pages were firstly written whithout useContext hook. It was a simple and efficient way to code each pages but not that scalable.
+And then I decided I want break app into more components to better organise both the app and my work. I've refactored all my pages into components using this hook.
+
+I've also learnt a lot about grid and flexbox, I guess I gained deeper understanding about them but I'm still not quite grasping it all yet... 
 
 To see how you can add code snippets, see below:
 
@@ -111,31 +115,25 @@ const proudOfThisFunc = () => {
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+UX side : scrolling and animations.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://css-tricks.com/snippets/css/complete-guide-grid/) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Example resource 1](https://styled-components.com/docs/basics) - This helped me to implement mobile menu.
+- [Example resource 2](https://css-tricks.com/snippets/css/complete-guide-grid/) - This is an amazing website to take reference from whether for CSS Grids and CSS flexbox layouts. And even more...
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [William](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I've started coding this project from a blank react project, no templates were used. I kept myself away from looking to Scrimba solution or any other solutions that could be found online. 
+Therefore this is truly my own solution and many things are discutable and prompt to errors as I consider myself as a beginner.

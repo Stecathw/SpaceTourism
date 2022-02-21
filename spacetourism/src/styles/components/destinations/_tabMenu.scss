@@ -36,6 +36,22 @@
 
 @media screen and (max-width: $breakpoint-tablet-max) {
     .menu {
-        width: 285.5px;
+        width: 37vw;
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+    .menu {
+        width: 73vw;
+        ul {
+            li {
+                span {
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 2.3625px;
+                }
+            }
+        }
+
     }
 }

@@ -1,0 +1,58 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+     .buttonIdleCircle {
+          height: toRem(274px);
+          width: toRem(274px);
+          a {
+              text-decoration: none;
+          }
+          .circle {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 100%;
+              width: 100%;
+              background-color: $color-3;
+              border-radius: 50%;
+              z-index : 3; 
+              h4 {
+                  text-align: center;
+                  letter-spacing: 1.25px;
+                  color: #0B0D17;
+              }
+          }
+          .circle:hover {
+              transform: scale(1.05);
+              box-shadow: 0px 0px 0px 88px rgb(255 255 255 / 10%);
+          }
+     }
+}
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+     .buttonIdleCircle {
+          height: toRem(242px);
+          width: toRem(242px);
+     }
+}
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+     .buttonIdleCircle {
+          height: toRem(150px);
+          width: toRem(150px);
+          .circle {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 100%;
+              width: 100%;
+              background-color: $color-3;
+              border-radius: 50%;
+              z-index : 3;
+               h4 {
+                  font-size: 20px;
+                  line-height: 23px;
+                  text-align: center;
+                  color: #0B0D17;
+               }
+          }
+     }      
+}
