@@ -3,9 +3,26 @@
 /// GROUPS NAVBAR + PAGEs CONTENT UNDER MAIN.
 
 .main {
-    width: 100%;
-    min-height: 100vh;
+    // position: absolute;
+    // top:0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // width: 100%;
+    // min-height: 100vh;
+    // height: 100%;
+    width: 100vw;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: content-box;
+    .home {
+        overflow-y: auto;
+    }
+
     .destination, .crew, .technology {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto 1fr; // auto : adjust to navbar height and let page content fill rest of page

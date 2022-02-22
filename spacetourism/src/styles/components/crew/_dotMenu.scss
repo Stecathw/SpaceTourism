@@ -1,7 +1,7 @@
 @media screen and (max-width: $breakpoint-desktop-max) {
      .menu {
           width: 9.1vw;
-
+          margin-top: 8vh;
           ul {
               display: flex;
               justify-content: space-between;
@@ -26,6 +26,7 @@
 @media screen and (max-width: $breakpoint-tablet-max) {
      .menu {
           width: 88px;
+          
           ul {
 
               li {

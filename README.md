@@ -126,6 +126,13 @@ UX side : scrolling and animations.
 - [Example resource 1](https://styled-components.com/docs/basics) - This helped me to implement mobile menu.
 - [Example resource 2](https://css-tricks.com/snippets/css/complete-guide-grid/) - This is an amazing website to take reference from whether for CSS Grids and CSS flexbox layouts. And even more...
 
+For deployment purposes:
+
+https://janessagarrow.com/blog/how-to-deploy-a-subdirectory-to-heroku/
+https://devcenter.heroku.com/articles/heroku-cli
+https://help.heroku.com/O0EXQZTA/how-do-i-switch-branches-from-master-to-main
+
+"git subtree push --prefix spacetourism heroku master"
 
 ## Author
 

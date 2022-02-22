@@ -15,6 +15,7 @@
           }
           .numbers {
               margin-top: toRem(28px);
+              margin-bottom: toRem(28px);
               display: grid;
               grid-template-rows: 1fr;
               grid-template-columns: auto auto;
