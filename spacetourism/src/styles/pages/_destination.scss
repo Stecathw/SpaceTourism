@@ -1,10 +1,5 @@
-
 @media screen and (max-width: $breakpoint-desktop-max) {
-    .destination {
-        .title {
-            grid-area: "title";
-            @import '../components/title';
-        }
+    .destination {       
         .content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -24,7 +19,7 @@
                 align-self: center;
                 justify-self: center;
                 .box {
-                    width: 30vw;
+                    width: 31vw;
                     @import '../components/destinations/tabMenu';
                     @import '../components/destinations/description';
                 }

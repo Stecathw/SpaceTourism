@@ -1,8 +1,6 @@
 @media screen and (max-width: $breakpoint-desktop-max) {
      .image {
           img {
-               // height: auto;
-               // max-width: 100%;
                animation: rotating 240s linear infinite;
           }
           @keyframes rotating {

@@ -26,8 +26,9 @@
                     color: $color-3;
                 }
             }
-            li:hover {
+            li.idle:hover {
                 cursor: pointer;
+                @include Hover;
             }
         }
     }

@@ -135,6 +135,42 @@ p {
     color: $color-2;
 }
 
+@media screen and (max-width: $breakpoint-tablet-max) {
+    h2 {
+        font-size: 80px;
+        line-height: 92px;
+    }
+    h3 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+    h4 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+    h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    h4 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
 li {
     list-style-type: none;
 }

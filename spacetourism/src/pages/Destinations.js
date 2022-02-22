@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Nav from '../components/Nav'
-import Description from '../components/destinations/Description'
-import Image from '../components/destinations/Image'
-import TabMenu from '../components/destinations/TabMenu'
-import Title from '../components/destinations/Title'
+import Nav from '../components/Nav';
+import Description from '../components/destinations/Description';
+import Image from '../components/destinations/Image';
+import TabMenu from '../components/destinations/TabMenu';
+import Title from '../components/Title';
 
-import PlanetProvider from '../components/destinations/util/Context'
+import PlanetProvider from '../components/destinations/util/Context';
 
 function Destinations( { destinations } ) {
 
@@ -15,7 +15,7 @@ function Destinations( { destinations } ) {
      return (
         <div className="destination">
             <Nav/>
-            <div className="title">
+            <div className="title-content">
                 <Title nb={'01'} title={'Pick your destination'}/>
             </div>
             <div className="content">

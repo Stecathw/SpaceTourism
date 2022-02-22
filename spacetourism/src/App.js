@@ -7,8 +7,6 @@ import Destinations from './pages/Destinations';
 import Crew from './pages/Crew';
 import Technology from './pages/Technology';
 
-// import Test from './pages/Test';
-
 import data from "./data/data.json";
 
 function App() {
@@ -18,7 +16,7 @@ function App() {
         <Route path='/destination/*' element={<Destinations destinations={data.destinations}/>}/>         
         <Route path='/crew' element={<Crew crew={data.crew}/>}/>
         <Route path='/technology' element={<Technology technology={data.technology}/>}/>
-        {/* <Route path='/test' element= { <Test allDest={ data.destinations } /> } /> */}
+
       </Routes>
   );
 }

@@ -1,9 +1,12 @@
 @media screen and (max-width: $breakpoint-desktop-max) {
     .title {
-        padding-left: toRem(165px);
+        width: 382px;
+        white-space: nowrap;
+        justify-self: center;
         transform: translateX(toRem(28px));
         padding-top: toRem(76px);
         h5 {
+
             color: $color-3;
             span {
                 padding-right: toRem(28px);
@@ -17,7 +20,7 @@
      .title {
         padding-left: 38.5px !important;        
         padding-top: toRem(40px);
-        transform: translateX(0);
+        // transform: translateX(0);
         padding-bottom: 60px;
         h5 {
             font-size: 20px;
@@ -32,7 +35,7 @@
         display: flex;
         align-content: center;
         justify-content: center;
-        
+        transform: translateX(0);
         padding-left: 0 !important;        
         padding-top: 24px;
         padding-bottom: 0;//32px;

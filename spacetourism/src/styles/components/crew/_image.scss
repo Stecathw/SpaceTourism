@@ -1,0 +1,29 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+     .image {
+          img {
+               max-height: 100%;
+               width: auto;
+          }
+     }
+}
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+     .image {
+          img {
+               width: auto;
+               max-height: 532px;
+          }
+     }
+}
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+     .image {
+          
+          
+          img {
+               max-width: 177px;
+               height: auto;
+               
+          }
+     }
+}

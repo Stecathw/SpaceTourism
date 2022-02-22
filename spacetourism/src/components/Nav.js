@@ -37,7 +37,8 @@ function Nav() {
                             <NavLink to="/technology" className='navLink' activeclassname='active'>Technology</NavLink>
                         </li>
                     </ul>
-                </nav> 
+                </nav>
+                {/* /// MOBILE ///  */}
                 <Icon />
                 <Burger open={open} setOpen={setOpen}/>
                 <MobileMenu open={open} setOpen={setOpen}/>       
