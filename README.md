@@ -31,7 +31,7 @@ Users should be able to:
 
 The site is currently optimised for 3 different screen sizes (mobile, tablet and desktop).
 
-![https://github.com/Stecathw/SpaceTourism/tree/main/screenshots/Destinations-Mars-desktop.png](https://github.com/Stecathw/SpaceTourism/tree/main/screenshots/Destinations-Mars-desktop.png)
+![./screenshots/Destinations-Mars-desktop.png](./screenshots/Destinations-Mars-desktop.png)
 
 ![./screenshots/Technology-3-tablet.png](./screenshots/Technology-3-tablet.png)
 
