@@ -16,12 +16,11 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
 
+Working from figma, I coded "from scratch" the space tourism website.
 Users should be able to:
 
 - View the optimal layout for each of the website's pages depending on their device's screen size
@@ -30,22 +29,22 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+The site is currently optimised for 3 different screen sizes (mobile, tablet and desktop).
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![./ressources/Destinations-Mars-desktop.png](./screenshot.jpg)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+![./ressources/Technology-3-tablet.png](./screenshot.jpg)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![./ressources/Home-menu-mobile.png](./screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Stecathw/SpaceTourism/tree/main/spacetourism](https://github.com/Stecathw/SpaceTourism/tree/main/spacetourism)
+- Live Site URL: [https://space-tourism-challenge.herokuapp.com/](https://space-tourism-challenge.herokuapp.com/)
 
 ## My process
+
+Currently worked time on project : around 10 days. (part time)
 
 1 - Initialized project with react and sass and a brand new fresh app ready to be coded. Also, installed react router dom. 
 Deleted all useless things bring by create-react-app process.
@@ -78,6 +77,15 @@ So now for each pages there will be anoter util folder with a Context.js and Get
 13 - Came back on home page and worked mobile menu. I've installed styled-components, https://styled-components.com/docs/basics and implemented my mobile menu using https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/. By the way one of my favourite ressources when building frontend things.
 Used this tutorial to make things faster and easier. I want to focus more on responsive stuff.
 
+14 - Focused on scss design
+
+15 - React pages all written.
+
+16 - First deployment and tests.
+
+17 - Fixes and refactoring parts of code.
+
+18 - New deployment
 
 ### Built with
 
@@ -85,19 +93,23 @@ Used this tutorial to make things faster and easier. I want to focus more on res
 - Flexbox
 - CSS Grid
 - [React](https://reactjs.org/) - JS library
+- [React-router-Dom] (https://reactrouter.com/) - For navigation
 - [Styled Components](https://styled-components.com/) - For styles
 
 
 ### What I learned
 
-I've learned one more hook : useContext along with CreateContext and Provider Context. (Redux was a bit too much for this app)
+Another hook :
+
+I've learned useContext along with CreateContext and Provider Context. (Redux was a bit too much for this app)
 As I've many times faced trouble when managing states while breaking aparts a page into components I need useContext to makes things easier but not to complex. 
 So every pages were firstly written whithout useContext hook. It was a simple and efficient way to code each pages but not that scalable.
 And then I decided I want break app into more components to better organise both the app and my work. I've refactored all my pages into components using this hook.
 
-I've also learnt a lot about grid and flexbox, I guess I gained deeper understanding about them but I'm still not quite grasping it all yet... 
+CSS grids are powerfull :
 
-To see how you can add code snippets, see below:
+Even if I've used grid and flexbox in previous projects, I guess I gained deeper understanding about them but still a lot under the hood to understand. 
+
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
@@ -113,32 +125,35 @@ const proudOfThisFunc = () => {
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-
-
 ### Continued development
 
-UX side : scrolling and animations.
+ - Refactoring destination page (see comments inside code both in Destinations.js and _destinations.scss).
+
+ - UX side : 
+    General transitions and animations.
+    Horizontal scrolling on tabs and submenu (as well as finger slide on mobile device)
+
+- 404 error page.
+
+- Fixing vertical responsiveness and handling more screen sizes.
+
+- Creating params and url routes for tabs and submenus (I've tried it with react router dom but was locked since I didn't find how to pass an optional argument into path)
 
 ### Useful resources
 
-- [Example resource 1](https://styled-components.com/docs/basics) - This helped me to implement mobile menu.
-- [Example resource 2](https://css-tricks.com/snippets/css/complete-guide-grid/) - This is an amazing website to take reference from whether for CSS Grids and CSS flexbox layouts. And even more...
+- [Styled components](https://styled-components.com/docs/basics) - This helped me to implement mobile menu.
 
-For deployment purposes:
+- [CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) - This is an amazing website to take reference from whether for CSS Grids and CSS flexbox layouts. And even more...
 
-https://janessagarrow.com/blog/how-to-deploy-a-subdirectory-to-heroku/
-https://devcenter.heroku.com/articles/heroku-cli
-https://help.heroku.com/O0EXQZTA/how-do-i-switch-branches-from-master-to-main
 
-"git subtree push --prefix spacetourism heroku master"
+ - [Heroku subdirectory deployment](https://janessagarrow.com/blog/how-to-deploy-a-subdirectory-to-heroku/) - For deployment purposes from a subdir. Use : "git subtree push --prefix spacetourism heroku master"
+
+ - [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+
 
 ## Author
 
 - Website - [William](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
 
 ## Acknowledgments
 
