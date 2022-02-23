@@ -3,20 +3,13 @@
 /// GROUPS NAVBAR + PAGEs CONTENT UNDER MAIN.
 
 .main {
-    // position: absolute;
-    // top:0;
-    // left: 0;
-    // right: 0;
-    // bottom: 0;
-    // width: 100%;
-    // min-height: 100vh;
-    // height: 100%;
-    width: 100vw;
+    width: 100%;
     height: 100%;
-    min-height: 100%;
-    box-sizing: content-box;
+    // min-height: 100%;
+    box-sizing: inherit;
     .home {
-        overflow-y: auto;
+        overflow-x: hidden;
+        overflow-y: auto; // litlle tricks to make things easier with responsive on height (y axis)
     }
 
     .destination, .crew, .technology {
@@ -35,7 +28,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto;
-
             @import '../components/title';
         }
     }
@@ -43,13 +35,11 @@
 
 @media screen and (max-width: $breakpoint-mobile-max) {
     .main {
-
         .destination, .crew, .technology {
             -webkit-overflow-scrolling: touch;
             overflow-x: hidden;
             overflow-y: auto;
             grid-template-rows: 88px auto 1fr;
-
             .title-content {
                 grid-template-columns: 1fr;
             }

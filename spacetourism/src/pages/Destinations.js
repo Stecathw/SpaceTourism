@@ -24,6 +24,7 @@ function Destinations( { destinations } ) {
                         <Image />
                     </div> 
                     <div className="planet-content"> 
+                    {/* .box COULD BE REMOVED LIKE ON PAGES Technology and Crew */}
                         <div className="box">
                             <TabMenu allDest = { destinations }/>              
                             <Description/>

@@ -3,90 +3,92 @@
         .content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
-            grid-template-areas: "content" "image";
-
-            .crew-image {
-                grid-area: "image";
-                align-self: end;
-                justify-self: center;
-                overflow: visible;
-                @import '../components/crew/image';
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+                "content" "image"
+                "menu" "image";
+            .crew-menu {
+                grid-area: "menu";
+                grid-row-start: 2;
+                justify-self: start;
+                align-self: start;
+                padding-left: 167px; // left alignment a bit sketchy
+                @import '../components/crew/dotMenu';
             }
             .crew-content {
                 grid-area: "content";
-                padding-top: 17vh;
-                padding-bottom: 10.4vh;
-                transform: translateX(toRem(28px)); //hack to make things left aligned to title
-                justify-self: center;
+                grid-row-start: 1;
+                justify-self: start;
+                align-self: center;
+                padding-left: 167px; // left alignment a bit sketchy
+                z-index: 5;
                 @import '../components/crew/member';
-                @import '../components/crew/dotMenu';
+            }
+            .crew-image {
+                grid-area:
+                    "image" 
+                    "image";
+                grid-row-start: 1;
+                grid-row-end: 3;
+                justify-self: center;
+                align-self: end;
+                @import '../components/crew/image';
             }
         }
     }
 }
+
 @media screen and (max-width: $breakpoint-tablet-max) {
     .crew {
+        overflow-y: clip !important;
         .content {
-            grid-template-rows: auto auto;
+            grid-template-rows: auto auto auto;
             grid-template-columns: 1fr;
-            grid-template-areas: 
-                "content"                
-                "image";
             grid-row-gap: 40px;
-                .crew-content {
-                    transform: translateX(0);
-                    text-align: center;
-                    padding : 0;
-                    display: grid;
-                    grid-row-gap: 40px;
-                    justify-items: center;
-                    align-items: center;
-                }
+            grid-template-areas: "content" "menu" "image";
+            grid-row-start: "content";
+            .crew-content {
+                grid-row-start: 1;
+                grid-area: "content";
+                padding-left: 0;
+                justify-self: center;
+            }
+            .crew-menu {
+                grid-area: "menu";
+                padding-left: 0;
+                justify-self: center;
+            }
+            .crew-image {
+                grid-row-start: 3;
+                grid-area: "image";
+            }
         }
     }
 }
 
 @media screen and (max-width: $breakpoint-mobile-max) {
     .crew {
-        .content {
-            
-            padding: 0 24px;
-            padding-top: 32px;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto;
+        overflow-y: scroll !important;
+        .content{
+            grid-template-rows: auto max-content auto;
+            grid-template-areas: "image" "menu" "content";
+            grid-row-start: "image";
             grid-row-gap: 32px;
-            grid-template-areas: 
-                "1" 
-                "2";
             .crew-image {
-                grid-area: "1" !important;
-                align-self: end;
-                justify-content: center;
-                display: flex;
-                width: 100%;
+                grid-row-start: 1;
+                grid-row-end: 2 !important;
+                padding-top: 32px;
                 
-                border-bottom: 1px solid rgba(56, 59, 75, 1);
             }
-
+            .crew-menu {
+                grid-row-start: 2;
+            }
             .crew-content {
-                grid-row-start: 2; // Trick to reverse order from original divs order
-                grid-area: "2";
-                grid-row-gap: 32px;
-                grid-template-columns: 1fr;
-                grid-template-rows: min-content auto;
-                grid-template-areas: 
-                    "menu"
-                    "description";
-                .menu {                    
-                    grid-area: "menu";
-                }
-                .member-infos {
-                    grid-row-start: 2;
-                    grid-area: "description";
-                    align-self: start;
-                }
+                grid-row-start: 3;
+                align-self: start;
             }
         }
     }
 }
+
+

@@ -1,0 +1,91 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+     .menu {
+          justify-self: center;
+          counter-reset: submenu;
+          // height: fit-content;
+          ul {
+               display: grid;
+               grid-template-columns: auto;
+               grid-template-rows: 1fr 1fr 1fr;
+               grid-row-gap: 32px;
+          //     display: flex;
+          //     flex-direction: column;
+          //     justify-content: space-between;
+              li {
+                  height: 80px;
+                  width: 80px;
+                  background-color: $color-3;
+                  border-radius: 50%;
+                  border: 1px solid $color-3;
+              }
+              li::before {
+                  counter-increment: submenu;
+                  content: counter(submenu);
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                  top: calc(50% - 18.5px);
+                  font-family: Bellefair;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 32px;
+                  line-height: 37px;
+                  letter-spacing: 2px;
+                  color: #0B0D17;
+              }
+              .active {
+                  opacity: 1;
+              }
+              li.idle {
+                  background-color: transparent;
+                  &::before {
+                      color: $color-3;
+                  }
+              }
+              li.idle:hover{
+                  cursor: pointer;
+                  opacity: 0.25;
+              }
+          }
+     }
+}
+@media screen and (max-width: $breakpoint-tablet-max) {
+     .menu {
+          width: 210px;
+          ul {
+               display: flex;
+               justify-content: space-between;
+               li {
+                    height: 60px;
+                    width: 60px;
+               }
+               li::before {
+                    font-size: 24px;
+                    line-height: 28px;
+                    letter-spacing: 1.5px;
+                    transform: translateX(0.75px);
+                    top: calc(50% - 12px);
+               }
+          }
+     }
+}
+@media screen and (max-width: $breakpoint-mobile-max) {
+     .menu {
+          width: 152px;
+          ul {
+               display: flex;
+               justify-content: space-between;
+               li {
+                    height: 40px;
+                    width: 40px;
+               }
+               li::before {
+                    font-size: 16px;
+                    line-height: 18px;
+                    letter-spacing: 1px;
+                    transform: translateX(0.5px);
+                    top: calc(50% - 8px);
+               }
+          }
+     }
+}

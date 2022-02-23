@@ -1,39 +1,35 @@
 @media screen and (max-width: $breakpoint-desktop-max) {
      .menu {
-          width: 9.1vw;
-          margin-top: 8vh;
-          ul {
-              display: flex;
-              justify-content: space-between;
-              li {
-                  height: 15px;
-                  width: 15px;
-                  background-color: $color-3;
-                  border-radius: 50%;
-                  opacity: 0.17;
-              }
-              .active {
-                  opacity: 1;
-              }
-              li.idle:hover{
-                  cursor: pointer;
-                  opacity: 0.25;
-              }
-          }
-     }
+        width: 9.1vw;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            li {
+                height: 15px;
+                width: 15px;
+                background-color: $color-3;
+                border-radius: 50%;
+                opacity: 0.17;
+            }
+            .active {
+                opacity: 1;
+            }
+            li.idle:hover{
+                cursor: pointer;
+                opacity: 0.25;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $breakpoint-tablet-max) {
-     .menu {
-          width: 88px;
-          
-          ul {
-
-              li {
-                  height: 12px;
-                  width: 12px;
-
-              }
-          }
-     }
+    .menu {
+        width: 88px;          
+        ul {
+            li {
+                height: 12px;
+                width: 12px;
+            }
+        }
+    }
 }

@@ -29,6 +29,7 @@
 
 @media screen and (max-width: $breakpoint-tablet-max) {
      .buttonIdleCircle {
+          margin: 7vh 0;
           height: toRem(242px);
           width: toRem(242px);
      }
@@ -36,6 +37,7 @@
 
 @media screen and (max-width: $breakpoint-mobile-max) {
      .buttonIdleCircle {
+          margin: 5vh 0;
           height: toRem(150px);
           width: toRem(150px);
           .circle {

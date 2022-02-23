@@ -1,29 +1,18 @@
 @media screen and (max-width: $breakpoint-desktop-max) {
      .image {
           img {
-               max-height: 100%;
                width: auto;
-          }
-     }
-}
-
-@media screen and (max-width: $breakpoint-tablet-max) {
-     .image {
-          img {
-               width: auto;
-               max-height: 532px;
+               height: auto;
           }
      }
 }
 
 @media screen and (max-width: $breakpoint-mobile-max) {
-     .image {
-          
-          
+     .image {                
           img {
+
                max-width: 177px;
-               height: auto;
-               
+               height: auto;            
           }
      }
 }

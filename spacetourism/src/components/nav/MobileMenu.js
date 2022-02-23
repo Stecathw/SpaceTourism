@@ -30,8 +30,7 @@ export const StyledClose = styled.div`
           top: 0;      
           width: 24px;
           height: 24px;
-          padding-top: 36px;
-          padding-right: 24px;
+          transform: translate(-36px, 36px);
           z-index: 3;
      }
 `;
@@ -54,7 +53,12 @@ function MobileMenu({ open, setOpen }) {
      <>
           <StyledMenu open={open}> 
                <StyledClose>
-                    <img src="./media/nav/icon-close.svg" alt="close" id="close" onClick={() => setOpen(!open)}/>
+                    <img 
+                         src="./media/nav/icon-close.svg" 
+                         alt="close" id="close" 
+                         onClick={() => setOpen(!open)}
+                         style={{height:'24px',width: '24px'}}
+                    />
                </StyledClose> 
                <div className='mobileNav'>
                     <ul>

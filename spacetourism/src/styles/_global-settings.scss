@@ -22,30 +22,19 @@ $breakpoint-mobile-max: 540px;
     @return math.div($value, 16px) * 1rem;
 }
 
-// html, body {
-//     width: 100%;
-//     min-height: 100vh;
-// }
 
-// html > body > .main > #root > div {
-//     height: 100vh;
-// }
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    
+* { 
+    // margin: 0;
+    // padding: 0;
+    box-sizing: border-box;
 }
-
 
 html, body {
     margin: 0;
     padding: 0;
-}
-
-img {
-    max-width: 100%;
-    display: block;
+    width: 100%;
+    min-height: 100vh; 
+    box-sizing: border-box;
 }
 
 h1, h2, h3, h4 ,h5, ul, li {

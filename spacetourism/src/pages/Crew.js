@@ -20,16 +20,15 @@ function Crew( { crew }) {
             </div>
             <div className='content'>
                 <CrewProvider>
-
+                    <div className='crew-menu'>
+                        <DotMenu allCrewMembers={ crew }/> 
+                    </div>
                     <div className='crew-content'>
-                        <Member />  
-                        <DotMenu allCrewMembers={ crew }/>                  
-                    </div>  
-                    
+                        <Member />           
+                    </div>                    
                     <div className='crew-image'>
                         <Image/>
-                    </div> 
-             
+                    </div>              
                 </CrewProvider>
             </div>
         </div>

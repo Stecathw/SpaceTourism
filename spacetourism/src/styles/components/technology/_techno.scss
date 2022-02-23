@@ -1,0 +1,36 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+     .techno-infos {
+          display: flex;
+          flex-direction: column;
+          
+          height: 303px;
+          h5 {
+              font-family: Barlow Condensed;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 19px;
+              letter-spacing: 2.7px;
+              color: #D0D6F9;
+              padding-bottom: 11px;
+          }
+          h3 {
+               white-space: nowrap;
+          }
+          p {
+               max-width: 444px;
+          }
+     }
+}
+@media screen and (max-width: $breakpoint-tablet-max) {
+
+}
+@media screen and (max-width: $breakpoint-mobile-max) {
+     .techno-infos {
+          height: 220px;
+          p {
+               width: 327px;
+          }
+     }
+
+}

@@ -19,7 +19,7 @@ function Home() {
                     </p>                
                 </div>
                 <div className="buttonExplore">
-                    <Button />                                                                                                                   */}
+                    <Button />
                 </div>
             </div>
         </div>

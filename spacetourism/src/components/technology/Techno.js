@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react';
 
-function Techno( { techno}) {
+import { TechnoContext } from './util/Context';
+
+function Techno() {
+
+  const { currentTechno } =useContext(TechnoContext)
   return (
     <div className='techno-infos'>
         <h5>The terminology...</h5>
-        <h3>{  techno.name }</h3>
-        <p>{ techno.description}</p>        
+        <h3>{  currentTechno.name }</h3>
+        <p>{ currentTechno.description}</p>        
     </div>
   )
 }

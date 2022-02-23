@@ -1,0 +1,31 @@
+@media screen and (max-width: $breakpoint-desktop-max) {
+     .image {
+          
+          #portrait {
+               z-index: 0;
+               transform: scale(120%);
+               transform-origin: right;
+               display: block;
+          }
+          #landscape {
+               display: none;
+          }
+     }
+}
+@media screen and (max-width: $breakpoint-tablet-max) {
+     .image {
+          #portrait {
+               display: none;
+          }
+          #landscape {
+
+               width: 100%;
+               display: block;
+          }
+     }
+}
+@media screen and (max-width: $breakpoint-mobile-max) {
+     #landscape {
+          width: 100%;
+     }
+}
