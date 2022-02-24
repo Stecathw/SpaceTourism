@@ -87,7 +87,7 @@ Used this tutorial to make things faster and easier. I want to focus more on res
 
 18 - New deployment
 
-19 - After testing the app on various devices, I'm currently working on implementing swipe and touch possibility. It will be available for destçnations page first.
+19 - Made some fixes and implemented the wsipe possibility with react-swipeable lib. Only destination page got that feature. I'm asking myself about performance and efficiency of code here see notes in [Continued development](#continued-development)
 
 
 ### Built with
@@ -103,45 +103,33 @@ Used this tutorial to make things faster and easier. I want to focus more on res
 
 ### What I learned
 
-Another hook :
+I've learned that it is not as easy to make things look like the figma design. I had to think about architecture and design patterns to break things into components and keep the whole project as simple as I can and not that messy. Many design choices are then bring to interpretations Sometimes I had to came back on my initial approach to achieve what I intented to do. I made a lot of back and forth between figma and website under developments and still they are lot of interpretation a single figma graphism can't solve alone. (missing communication with a team ? between UI/UX and dev ?!) For instance how should behave components with responsiveness ?
 
 I've learned useContext along with CreateContext and Provider Context. (Redux was a bit too much for this app)
 As I've many times faced trouble when managing states while breaking aparts a page into components I need useContext to makes things easier but not to complex. 
 So every pages were firstly written whithout useContext hook. It was a simple and efficient way to code each pages but not that scalable.
-And then I decided I want break app into more components to better organise both the app and my work. I've refactored all my pages into components using this hook.
+And then I decided I want to break app into more components to better organise both the app and my work. I've refactored all my pages into components using this hook.
 
-CSS grids are powerfull :
+I introduced myself to useRef (for mobile menu) and useReducer along with dispatch event. But here i want to go deeper and have work...
 
 Even if I've used grid and flexbox in previous projects, I guess I gained deeper understanding about them but still a lot under the hood to understand. 
 
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+Styled-component lib is realy usefull to handle dynamic styles behavior along with states.
 
 ### Continued development
 
-- Refactoring destination page (see comments inside code both in Destinations.js and _destinations.scss) by removing box div.
 
 - Working on perfomance and loading data and image ? (Lazy loading perhaps ?)
+  -> useReducer and dispacth for wipe events
+  -> Find out if they are more rerenders in my components than necessary since I used use Context and value are often change (normally only when window event, just in case... and by curiousity)
 
 - UX side : 
-  General transitions and animations.
-  Horizontal scrolling on tabs and submenu (as well as finger slide on mobile device)
+  General transitions and animations. (A lot can be done, creativity here...)
+  Horizontal scrolling on tabs and submenu (as well as finger slide on mobile device) on all pages.
 
-- 404 error page.
+- Transitions between pages and 404 error page.
 
-- Fixing vertical responsiveness and handling more screen sizes.
+- Fixing vertical responsiveness and handling more screen sizes. (Really small width devices encounter a Y axis decentered .main div)
 
 - Creating params and url routes for tabs and submenus (I've tried it with react router dom but was locked since I didn't find how to pass an optional argument into path)
 
@@ -158,7 +146,7 @@ const proudOfThisFunc = () => {
 
 ## Author
 
-- Website - [William](https://www.your-site.com)
+- Website - [William](https://mon-cv-en-ligne.herokuapp.com/)
 
 ## Acknowledgments
 
