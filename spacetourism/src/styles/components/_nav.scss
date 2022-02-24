@@ -42,44 +42,53 @@
                 height: 100%;
                 padding-left: 12%;
                 padding-right: 15%;
-                li {   
-                // to make bottom border pixel aligned with blurred container
+                li {
                 height: calc(100% - 3px);
-                a {
-                    color: $color-3;
-                    text-decoration: none;
+                    a {
+                        color: $color-3;
+                        text-decoration: none;
+                    }
+                    a::before {
+                        counter-increment: navlinks;
+                        content: "0"counter(navlinks);
+                        font-weight: bold;
+                        padding-right: toRem(12px);
+                    }
+                    .navLink {                      
+                        @include nav-text;                      
+                        @include FlexCentered;
+                        height: 100%;
+                    }
+                    // a:hover {
+                    //     @include Hover;               
+                    // }
+                    .active {
+                        cursor: default;                        
+                        transform: translateY(3px);
+                        border-bottom: 3px solid $color-3;
+                    }
                 }
-                a::before {
-                    counter-increment: navlinks;
-                    content: "0"counter(navlinks);
-                    font-weight: bold;
-                    padding-right: toRem(12px);
+                li:first-child {
+                    counter-set: navlinks  -1;
                 }
-                .navLink {                      
-                    @include nav-text;                      
-                    @include FlexCentered;
-                    height: 100%;
+                li:last-child {
+                    padding-right: 0px;
                 }
-                a:hover {
-                    @include Hover;                  
-                    
+                li::after {
+                    content: '';
+                    display: block;
+                    margin: auto;                    
+                    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+                    transform: scaleX(0);
+                    transition: transform 250ms ease-in-out;
+                    z-index: 6;
                 }
-                .active, .active:hover {
-                    @include Active;
+                li:hover::after {
+                    transform: scaleX(1);
                 }
-            }
-            li:first-child {
-                counter-set: navlinks  -1;
-            }
-            li:last-child {
-                padding-right: 0px;
-            }
             }
         }
     }
-    // .mobile {
-    //     display: none;
-    // }
 }
 
 @media screen and (max-width: $breakpoint-tablet-max) {

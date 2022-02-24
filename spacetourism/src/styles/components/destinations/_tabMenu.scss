@@ -52,6 +52,11 @@
                     letter-spacing: 2.3625px;
                 }
             }
+            // Avoid a bug generating the border bottom
+            // while navigating with slide or click action on mobile.
+            li.idle:hover {                
+                border-bottom: none;
+            }
         }
 
     }
