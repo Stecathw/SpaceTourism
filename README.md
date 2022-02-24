@@ -87,14 +87,18 @@ Used this tutorial to make things faster and easier. I want to focus more on res
 
 18 - New deployment
 
+19 - After testing the app on various devices, I'm currently working on implementing swipe and touch possibility. It will be available for destçnations page first.
+
+
 ### Built with
 
 - Sass
 - Flexbox
 - CSS Grid
 - [React](https://reactjs.org/) - JS library
+- [React-swipeable](https://www.npmjs.com/package/react-swipeable) - For swipe and touch events.
 - [React-router-Dom] (https://reactrouter.com/) - For navigation
-- [Styled Components](https://styled-components.com/) - For styles
+- [Styled Components](https://styled-components.com/) - For some styles
 
 
 ### What I learned
@@ -127,11 +131,13 @@ const proudOfThisFunc = () => {
 
 ### Continued development
 
- - Refactoring destination page (see comments inside code both in Destinations.js and _destinations.scss).
+- Refactoring destination page (see comments inside code both in Destinations.js and _destinations.scss) by removing box div.
 
- - UX side : 
-    General transitions and animations.
-    Horizontal scrolling on tabs and submenu (as well as finger slide on mobile device)
+- Working on perfomance and loading data and image ? (Lazy loading perhaps ?)
+
+- UX side : 
+  General transitions and animations.
+  Horizontal scrolling on tabs and submenu (as well as finger slide on mobile device)
 
 - 404 error page.
 
@@ -144,7 +150,6 @@ const proudOfThisFunc = () => {
 - [Styled components](https://styled-components.com/docs/basics) - This helped me to implement mobile menu.
 
 - [CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) - This is an amazing website to take reference from whether for CSS Grids and CSS flexbox layouts. And even more...
-
 
  - [Heroku subdirectory deployment](https://janessagarrow.com/blog/how-to-deploy-a-subdirectory-to-heroku/) - For deployment purposes from a subdir. Use : "git subtree push --prefix spacetourism heroku master"
 

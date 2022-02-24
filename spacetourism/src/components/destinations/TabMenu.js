@@ -9,18 +9,15 @@ function TabMenu( { allDest }) {
 
      const destinations = allDest
 
-     const { setCurrentPlanet } = useContext(PlanetContext)
-     
-     const [activeIndex, setActiveIndex] = useState(0)
+     const { activeIndex, setActiveIndex, setCurrentPlanet } = useContext(PlanetContext)        
 
      const handleClick = (destName, btnID) => {
           setCurrentPlanet(getData(destinations, destName))
           setActiveIndex(btnID)
      }
 
-
      return (
-          <div className="menu">
+          <div className="menu" >
                <ul>
                     {destinations.map((destination, _index) => {                         
                          return (

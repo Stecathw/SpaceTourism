@@ -3,7 +3,7 @@ import { PlanetContext } from './util/Context';
 
 function Description() {
 
-     const { currentPlanet } = useContext(PlanetContext)
+    const { currentPlanet } = useContext(PlanetContext)
 
     return (
         <div className='planet-infos'>
@@ -25,3 +25,4 @@ function Description() {
 }
 
 export default Description
+

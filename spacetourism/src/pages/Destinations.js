@@ -1,34 +1,34 @@
 import React from 'react';
 
 import Nav from '../components/Nav';
-import Description from '../components/destinations/Description';
 import Image from '../components/destinations/Image';
-import TabMenu from '../components/destinations/TabMenu';
 import Title from '../components/Title';
+import SliderBox from '../components/destinations/SliderBox';
 
 import PlanetProvider from '../components/destinations/util/Context';
+
 
 function Destinations( { destinations } ) {
 
      // CONTEXT : destination
-
      return (
         <div className="destination">
             <Nav/>
             <div className="title-content">
                 <Title nb={'01'} title={'Pick your destination'}/>
-            </div>
+            </div>              
             <div className="content">
                 <PlanetProvider>
                     <div className="planet-image">
                         <Image />
                     </div> 
                     <div className="planet-content"> 
-                    {/* .box COULD BE REMOVED LIKE ON PAGES Technology and Crew */}
-                        <div className="box">
+                        {/* ALL MENU AND DESCRIPTION IS LISTING TO SWIPE EVENT */}
+                        <SliderBox destinations={destinations}/>
+                        {/* <div className="box">
                             <TabMenu allDest = { destinations }/>              
                             <Description/>
-                        </div>
+                        </div> */}
                     </div>                           
                 </PlanetProvider>
             </div>
@@ -36,6 +36,8 @@ function Destinations( { destinations } ) {
     )
 }
 export default Destinations
+
+
 
 // import Destination from '../components/destinations/Destination';
 
