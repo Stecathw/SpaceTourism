@@ -1,6 +1,8 @@
 @media screen and (max-width: $breakpoint-desktop-max) {
      .member-infos {
           width: 30vw;
+          height: 303px;
+          margin-bottom: 88px;
           .member-role {
                padding-bottom: toRem(15px);
                h4 {
@@ -26,6 +28,8 @@
      .member-infos {
           width: 100%;
           text-align: center;
+          max-height: 182px ;
+          margin-bottom: 40px;
           .member-role {
                padding-bottom: toRem(8px);
           }
@@ -51,11 +55,7 @@
 @media screen and (max-width: $breakpoint-mobile-max) {
      .member-infos {
           width: 327px;
-          .member-role {
-          }
-          .member-name {
-
-          }
+          margin-top: 32px;
           .member-bio { 
                   
                p {

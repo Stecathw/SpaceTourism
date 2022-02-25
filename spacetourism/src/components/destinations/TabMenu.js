@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 
 import { PlanetContext } from './util/Context';
 
-import { getData } from './util/GetData';
+// import { getData } from './util/GetData';
 
+import { getData } from '../util/GetData';
 
 function TabMenu( { allDest }) {
 

@@ -1,35 +1,29 @@
 @media screen and (max-width: $breakpoint-desktop-max) {
     .crew {
+        // overflow-y: hidden !important;
         .content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-            grid-template-areas: 
-                "content" "image"
-                "menu" "image";
-            .crew-menu {
-                grid-area: "menu";
-                grid-row-start: 2;
-                justify-self: start;
-                align-self: start;
-                padding-left: 167px; // left alignment a bit sketchy
-                @import '../components/crew/dotMenu';
-            }
+            grid-template-rows: auto;
+            grid-template-areas: "content image";
+
             .crew-content {
                 grid-area: "content";
-                grid-row-start: 1;
-                justify-self: start;
+                justify-self: center;
                 align-self: center;
-                padding-left: 167px; // left alignment a bit sketchy
+                // padding-left: 167px; // left alignment a bit sketchy
                 z-index: 5;
-                @import '../components/crew/member';
+                .box {
+                    width: 31vw;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    @import '../components/crew/dotMenu';
+                    @import '../components/crew/member';
+                }
+                
             }
             .crew-image {
-                grid-area:
-                    "image" 
-                    "image";
-                grid-row-start: 1;
-                grid-row-end: 3;
+                grid-area: "image";
                 justify-self: center;
                 align-self: end;
                 @import '../components/crew/image';
@@ -42,24 +36,23 @@
     .crew {
         overflow-y: clip !important;
         .content {
-            grid-template-rows: auto auto auto;
+            grid-template-rows: auto 1fr;
             grid-template-columns: 1fr;
             grid-row-gap: 40px;
-            grid-template-areas: "content" "menu" "image";
-            grid-row-start: "content";
+            grid-template-areas: 
+                "content"
+                "image";
             .crew-content {
-                grid-row-start: 1;
                 grid-area: "content";
-                padding-left: 0;
                 justify-self: center;
-            }
-            .crew-menu {
-                grid-area: "menu";
-                padding-left: 0;
-                justify-self: center;
+                align-self: start;
+                .box {
+                    width: 100%;
+                    align-items: center;
+                    justify-items: center;
+                }
             }
             .crew-image {
-                grid-row-start: 3;
                 grid-area: "image";
             }
         }
@@ -70,22 +63,20 @@
     .crew {
         overflow-y: scroll !important;
         .content{
-            grid-template-rows: auto max-content auto;
-            grid-template-areas: "image" "menu" "content";
-            grid-row-start: "image";
+            grid-template-rows: auto 1fr;
             grid-row-gap: 32px;
             .crew-image {
-                grid-row-start: 1;
-                grid-row-end: 2 !important;
-                padding-top: 32px;
-                
-            }
-            .crew-menu {
-                grid-row-start: 2;
-            }
-            .crew-content {
-                grid-row-start: 3;
                 align-self: start;
+                grid-row-start: 1;
+                padding-top: 32px;                
+            }
+
+            .crew-content {
+                grid-row-start: 2;
+                align-self: start;
+                .box {
+                    flex-direction: column;
+                }
             }
         }
     }

@@ -87,8 +87,9 @@ Used this tutorial to make things faster and easier. I want to focus more on res
 
 18 - New deployment
 
-19 - Made some fixes and implemented the wsipe possibility with react-swipeable lib. Only destination page got that feature. I'm asking myself about performance and efficiency of code here see notes in [Continued development](#continued-development)
+19 - Made some fixes and implemented the swipe possibility with react-swipeable lib. Only destinations page got that feature at this point. I'm asking myself about performance and efficiency of code here see notes in [Continued development](#continued-development)
 
+20 - Added swipe feature to crew page. NB as a choice and not to rewright everything, only swiping on menu and text is possible (a box with both content). Images aren't listening to window events.
 
 ### Built with
 

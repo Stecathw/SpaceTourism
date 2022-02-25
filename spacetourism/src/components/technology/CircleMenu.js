@@ -2,7 +2,8 @@ import React, { useState, useContext } from 'react';
 
 import { TechnoContext } from './util/Context';
 
-import { getData } from './util/GetData';
+// import { getData } from './util/GetData';
+import { getData } from '../util/GetData';
 
 function CircleMenu( { technology }) {
 

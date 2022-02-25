@@ -6,10 +6,16 @@ export const CrewContext = createContext()
 function CrewProvider( {children} ) {
 
      const crew = data.crew
+     const [activeIndex, setActiveIndex] = useState(0)
      const [currentCrewMember, setCurrentCrewMember] = useState(crew[0])
 
      return (
-          <CrewContext.Provider value={{currentCrewMember, setCurrentCrewMember}}>
+          <CrewContext.Provider value={{
+               activeIndex, 
+               setActiveIndex, 
+               currentCrewMember, 
+               setCurrentCrewMember
+          }}>
                { children }
           </CrewContext.Provider>
      )

@@ -2,15 +2,16 @@ import React, { useState, useContext }from 'react';
 
 import { CrewContext } from './util/Context';
 
-import { getData } from './util/GetData';
+// import { getData } from './util/GetData';
+import { getData } from '../util/GetData';
 
 function DotMenu( { allCrewMembers } ) {
 
      const crew = allCrewMembers
 
-     const { setCurrentCrewMember } = useContext(CrewContext)
+     const { activeIndex, setActiveIndex, setCurrentCrewMember } = useContext(CrewContext)
 
-     const [activeIndex, setActiveIndex] = useState(0)
+     
 
      const handleClick = (crewMemberName, btnID) => {
           setCurrentCrewMember(getData(crew, crewMemberName))
