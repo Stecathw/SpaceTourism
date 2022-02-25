@@ -8,10 +8,19 @@
 }
 
 @media screen and (max-width: $breakpoint-mobile-max) {
-     .image {                
+     .image {
+
+          width: 327px;
+          display: flex;
+          justify-content: center;
+          border-bottom: 1px solid #383B4B;;                  
           img {
+               margin-right: auto;
+               margin-left: auto;
                max-width: 177px;
-               height: auto;            
+               height: auto; 
+                       
           }
      }
+
 }
