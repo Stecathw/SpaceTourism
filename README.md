@@ -92,7 +92,7 @@ Used this tutorial to make things faster and easier. I want to focus more on res
 20 - Added swipe feature to crew page. NB as a choice and not to rewright everything, only swiping on menu and text is possible (a box with both content). Images aren't listening to window events.
 
 21 - Added react transition group package to add animations and transitions especially between views (https://css-tricks.com/animating-between-views-in-react/)  
-Problem was to understand we have to display two routes at the same time and then apply styles for transition.
+
 
 ### Built with
 
