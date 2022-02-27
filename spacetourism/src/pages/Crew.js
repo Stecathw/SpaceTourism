@@ -1,14 +1,11 @@
 import React from 'react';
 
-// import Member from '../components/crew/Member';
-// import DotMenu from '../components/crew/DotMenu';
 import Nav from '../components/Nav';
 import Title from '../components/Title';
 import Image from '../components/crew/Image';
 import SliderBox from '../components/crew/SliderBox';
 
 import CrewProvider from '../components/crew/util/Context';
-
 
 function Crew( { crew }) {
 

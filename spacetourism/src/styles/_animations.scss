@@ -1,0 +1,57 @@
+/* PAGES TRANSITIONS */
+.page-appear,
+.page-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.page-appear-active,
+.page-enter.page-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear 150ms;
+}
+
+.page-exit {
+    opacity: 1;
+}
+
+.page-exit.page-exit-active {
+    opacity: 0;
+    transition: opacity 150ms linear;
+}
+
+
+// DESTINATIONS PLANET TRANSITIONS
+
+.planetNode-enter {
+    opacity: 0;    
+    transform: translateX(- 150%) translateY(- 50%) scale(0.10) rotate(- 90deg);
+
+}
+.planetNode-enter-active {
+    opacity: 1;
+    transform: translateX(0) translateY(0%) scale(1) rotate(0);
+    transition: transform 1200ms;
+}
+.planetNode-enter-done {
+    animation: rotating 240s linear infinite;
+    @keyframes rotating {
+        0% { 
+            transform: rotate(0); 
+        }
+        100% { 
+            transform: rotate(360deg);
+        }
+    }
+}
+.planetNode-exit {
+    transform: translateX(0) translateY(0%) scale(1) rotate(0);    
+    opacity: 0;
+}
+.planetNode-exit-active {
+    opacity: 1;
+    z-index: -5;
+    transform: translateX(150%) translateY(30%) scale(0) rotate( 90deg);
+    transition: transform 900ms;
+
+}
+

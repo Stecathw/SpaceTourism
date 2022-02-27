@@ -2,19 +2,18 @@ import React, { useContext } from 'react';
 
 import { PlanetContext } from './util/Context';
 
-// import { getData } from './util/GetData';
-
 import { getData } from '../util/GetData';
 
 function TabMenu( { allDest }) {
 
      const destinations = allDest
 
-     const { activeIndex, setActiveIndex, setCurrentPlanet } = useContext(PlanetContext)        
+     const { activeIndex, setActiveIndex, setCurrentPlanet, setInProp } = useContext(PlanetContext)        
 
      const handleClick = (destName, btnID) => {
           setCurrentPlanet(getData(destinations, destName))
           setActiveIndex(btnID)
+          setInProp(inProp => !inProp)
      }
 
      return (

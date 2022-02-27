@@ -5,10 +5,13 @@ export const PlanetContext = createContext()
 
 function PlanetProvider( {children} ) {
 
-     const destinations = data.destinations
-     // Adding index state to make things easier to manage between swipe or click events ?
-     const [activeIndex, setActiveIndex] = useState(0)
-     const [currentPlanet, setCurrentPlanet] = useState(destinations[0])
+  const destinations = data.destinations
+  // Adding index state to make things easier to manage between swipe or click events ?
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [currentPlanet, setCurrentPlanet] = useState(destinations[0])
+
+  // Animation toggler
+  const [inProp, setInProp] = useState(true)
 
   return (
     <PlanetContext.Provider value={{
@@ -16,7 +19,9 @@ function PlanetProvider( {children} ) {
       activeIndex,
       setActiveIndex,
       currentPlanet, 
-      setCurrentPlanet
+      setCurrentPlanet,
+      inProp,
+      setInProp
     }}>
          { children }
     </PlanetContext.Provider>

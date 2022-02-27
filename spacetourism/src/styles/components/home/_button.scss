@@ -13,7 +13,25 @@
               width: 100%;
               background-color: $color-3;
               border-radius: 50%;
-              z-index : 3; 
+              z-index : 3;
+              transform: scale(1);
+              animation: pulse 5s infinite; 
+              @keyframes pulse {
+                    0% {
+                         transform: scale(0.95);
+                         box-shadow: 0px 0px 0px 0px rgb(255 255 255 / 7%);
+                    }
+               
+                    70% {
+                         transform: scale(1);
+                         box-shadow: 0px 0px 0px 88px rgba(255, 255, 255, 10%);
+                    }
+               
+                    100% {
+                         transform: scale(0.95);
+                         box-shadow: 0 0 0 0 rgba(255, 255, 255, 7%);
+                    }
+               }
               h4 {
                   text-align: center;
                   letter-spacing: 1.25px;
@@ -21,9 +39,11 @@
               }
           }
           .circle:hover {
-              transform: scale(1.05);
-              box-shadow: 0px 0px 0px 88px rgb(255 255 255 / 10%);
+               animation-play-state: paused;
+               transform: scale(1.02) !important;
+               box-shadow: 0px 0px 0px 88px rgb(255 255 255 / 10%) !important;
           }
+
      }
 }
 
@@ -32,7 +52,32 @@
           margin: 7vh 0;
           height: toRem(242px);
           width: toRem(242px);
+          .circle {
+               transform: scale(1);
+               animation: pulse 3s infinite; 
+               @keyframes pulse {
+                    0% {
+                         transform: scale(0.95);
+                         box-shadow: 0px 0px 0px 0px rgb(255 255 255 / 7%);
+                    }
+               
+                    70% {
+                         transform: scale(1);
+                         box-shadow: 0px 0px 0px 50px rgba(255, 255, 255, 10%);
+                    }
+               
+                    100% {
+                         transform: scale(0.95);
+                         box-shadow: 0 0 0 0 rgba(255, 255, 255, 7%);
+                    }
+               }
+          }
+          .circle:hover {
+               transform: scale(1.01) !important;
+               box-shadow: 0px 0px 0px 50px rgb(255 255 255 / 10%) !important;
+          }
      }
+
 }
 
 @media screen and (max-width: $breakpoint-mobile-max) {
@@ -55,6 +100,29 @@
                   text-align: center;
                   color: #0B0D17;
                }
+               transform: scale(1);
+               animation: pulse 3s infinite; 
+               @keyframes pulse {
+                    0% {
+                         transform: scale(0.95);
+                         box-shadow: 0px 0px 0px 0px rgb(255 255 255 / 7%);
+                    }
+               
+                    70% {
+                         transform: scale(1);
+                         box-shadow: 0px 0px 0px 30px rgba(255, 255, 255, 10%);
+                    }
+               
+                    100% {
+                         transform: scale(0.95);
+                         box-shadow: 0 0 0 0 rgba(255, 255, 255, 7%);
+                    }
+               }
+          }
+          .circle:hover {
+               animation-play-state: paused;
+               transform: scale(1.005) !important;
+               box-shadow: 0px 0px 0px 30px rgb(255 255 255 / 10%) !important;
           }
      }      
 }

@@ -5,11 +5,10 @@
 .main {
     width: 100%;
     height: 100%;
-    // min-height: 100%;
     box-sizing: inherit;
     .home {
         overflow-x: hidden;
-        overflow-y: auto; // litlle tricks to make things easier with responsive on height (y axis)
+        overflow-y: auto; // little trick to make things easier with responsive on height (y axis)
     }
 
     .destination, .crew, .technology {
@@ -33,10 +32,11 @@
     }
 }
 
+
 @media screen and (max-width: $breakpoint-mobile-max) {
     .main {
         .destination, .crew, .technology {
-            -webkit-overflow-scrolling: touch;
+            -webkit-overflow-scrolling: touch; // Let swipe possibility
             overflow-x: hidden;
             overflow-y: auto;
             grid-template-rows: 88px auto 1fr;

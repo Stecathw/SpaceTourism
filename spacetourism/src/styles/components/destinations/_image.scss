@@ -1,16 +1,17 @@
 @media screen and (max-width: $breakpoint-desktop-max) {
      .image {
-          img {
-               animation: rotating 240s linear infinite;
-          }
-          @keyframes rotating {
-              0% { 
-                  transform: rotate(0); 
-              }
-              100% { 
-                  transform: rotate(360deg);
-              }
-          }
+          // img {
+          //      animation: rotating 240s linear infinite;
+          // }
+          // @keyframes rotating {
+          //     0% { 
+          //         transform: rotate(0); 
+          //     }
+          //     100% { 
+          //         transform: rotate(360deg);
+          //     }
+          // }
+
      }
 }
 
@@ -34,4 +35,6 @@
           }
      }
 }
+
+
 

@@ -12,7 +12,7 @@ const PREV = '-1';
 
 function SliderBox( { destinations }) {
 
-     const { activeIndex, setActiveIndex, setCurrentPlanet } = useContext(PlanetContext)        
+     const { activeIndex, setActiveIndex, setCurrentPlanet, setInProp } = useContext(PlanetContext)        
 
      const slide = (dir) => {
           let directionChange = dir === NEXT ? NEXT : PREV
@@ -30,6 +30,7 @@ function SliderBox( { destinations }) {
      }
 
      const handlers = useSwipeable({
+          onSwiped: () => setInProp(inProp => !inProp),
           onSwipedLeft: () => slide(NEXT),
           onSwipedRight: () => slide(PREV),
           preventDefaultTouchmoveEvent: true,

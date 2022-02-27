@@ -3,8 +3,18 @@
         width: 382px;
         white-space: nowrap;
         justify-self: center;
-        transform: translateX(toRem(28px));
+        // transform: translateX(toRem(28px));
         padding-top: toRem(76px);
+        padding-left: toRem(28px);
+        animation: animate 900ms;
+        @keyframes animate {
+            0% {
+                transform: translateX(- 100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
         h5 {
 
             color: $color-3;
