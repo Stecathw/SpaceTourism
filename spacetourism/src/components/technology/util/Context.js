@@ -7,9 +7,14 @@ function TechnoProvider( {children} ) {
 
      const technology = data.technology
      const [currentTechno, setCurrentTechno] = useState(technology[0])
+     const [inProp, setInProp ] = useState(true)
 
   return (
-    <TechnoContext.Provider value={{currentTechno, setCurrentTechno}}>
+    <TechnoContext.Provider value={{
+      currentTechno, 
+      setCurrentTechno, 
+      inProp, 
+      setInProp}}>
          { children }
     </TechnoContext.Provider>
   )

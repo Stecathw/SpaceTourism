@@ -1,4 +1,4 @@
-import React, { useState, useContext }from 'react';
+import React, { useContext }from 'react';
 
 import { CrewContext } from './util/Context';
 
@@ -9,13 +9,12 @@ function DotMenu( { allCrewMembers } ) {
 
      const crew = allCrewMembers
 
-     const { activeIndex, setActiveIndex, setCurrentCrewMember } = useContext(CrewContext)
-
-     
+     const { activeIndex, setActiveIndex, setCurrentCrewMember, setInProp } = useContext(CrewContext)
 
      const handleClick = (crewMemberName, btnID) => {
           setCurrentCrewMember(getData(crew, crewMemberName))
           setActiveIndex(btnID)
+          setInProp(inProp => !inProp)
      }
 
      return (

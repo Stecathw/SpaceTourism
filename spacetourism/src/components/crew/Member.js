@@ -1,25 +1,36 @@
 import React, { useContext } from 'react';
+import { SwitchTransition, CSSTransition } from 'react-transition-group';
 
 import { CrewContext } from './util/Context';
 
 function Member() {
 
-  const { currentCrewMember } = useContext(CrewContext)
+  const { currentCrewMember, inProp } = useContext(CrewContext)
   return (
-    <div className='member-infos'>
+    <SwitchTransition mode={'out-in'}>
+      <CSSTransition 
+          key={inProp}
+          addEndListener={(node, done) => {
+                  node.addEventListener("transitionend", done, false);
+          }}
+          classNames="DescriptionNode"
+      >
+        <div className='member-infos'>
 
-      <div className='member-role'>
-          <h4>{currentCrewMember.role}</h4>
-      </div>
-      
-      <div className="member-name">
-          <h3>{currentCrewMember.name}</h3>
-      </div>
-      <div className="member-bio">
-          <p>{currentCrewMember.bio}</p>            
-      </div>
+          <div className='member-role'>
+              <h4>{currentCrewMember.role}</h4>
+          </div>
+          
+          <div className="member-name">
+              <h3>{currentCrewMember.name}</h3>
+          </div>
+          <div className="member-bio">
+              <p>{currentCrewMember.bio}</p>            
+          </div>
 
-    </div>
+        </div>
+      </CSSTransition>
+    </SwitchTransition>
   )
 }
 

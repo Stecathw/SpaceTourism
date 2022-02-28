@@ -12,7 +12,7 @@ const PREV = '-1';
 
 function SliderBox( { crew }) {
 
-     const { activeIndex, setActiveIndex, setCurrentCrewMember } = useContext(CrewContext)        
+     const { activeIndex, setActiveIndex, setCurrentCrewMember, setInProp } = useContext(CrewContext)        
 
      const slide = (dir) => {
           let directionChange = dir === NEXT ? NEXT : PREV
@@ -30,8 +30,8 @@ function SliderBox( { crew }) {
      }
 
      const handlers = useSwipeable({
-          onSwipedLeft: () => slide(NEXT),
-          onSwipedRight: () => slide(PREV),
+          onSwipedLeft: () => {slide(NEXT); setInProp(inProp => !inProp)},
+          onSwipedRight: () => {slide(PREV); setInProp(inProp => !inProp)},
           preventDefaultTouchmoveEvent: true,
           trackMouse: true
      })

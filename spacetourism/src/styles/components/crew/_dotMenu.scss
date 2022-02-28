@@ -12,11 +12,13 @@
                 opacity: 0.17;
             }
             .active {
+                pointer-events: none;
                 opacity: 1;
             }
             li.idle:hover{
                 cursor: pointer;
                 opacity: 0.25;
+                transition: opacity 250ms ease-in-out;
             }
         }
     }

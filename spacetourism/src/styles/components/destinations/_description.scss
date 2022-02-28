@@ -34,8 +34,8 @@
 @media screen and (max-width: $breakpoint-tablet-max) {
      .planet-infos {
           padding-top: toRem(32px);
-          padding-right: 98px;
-          padding-left: 98px;
+          padding-right: toRem(98px);
+          padding-left: toRem(98px);
           p {
                margin-top: 8px;
                margin-bottom: 49px;
@@ -50,8 +50,8 @@
 @media screen and (max-width: $breakpoint-mobile-max) {
      .planet-infos {
           padding-top: toRem(20px);
-          padding-right: 24px;
-          padding-left: 24px;
+          padding-right: toRem(24px);
+          padding-left: toRem(24px);
           h2 {
                font-size: 56px;
                line-height: 64px;

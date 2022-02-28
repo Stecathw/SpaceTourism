@@ -59,11 +59,9 @@
                         @include FlexCentered;
                         height: 100%;
                     }
-                    // a:hover {
-                    //     @include Hover;               
-                    // }
                     .active {
-                        cursor: default;                        
+                        cursor: default;  
+                        pointer-events: none;                      
                         transform: translateY(3px);
                         border-bottom: 3px solid $color-3;
                     }

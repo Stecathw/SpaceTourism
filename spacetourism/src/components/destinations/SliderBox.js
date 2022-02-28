@@ -30,9 +30,9 @@ function SliderBox( { destinations }) {
      }
 
      const handlers = useSwipeable({
-          onSwiped: () => setInProp(inProp => !inProp),
-          onSwipedLeft: () => slide(NEXT),
-          onSwipedRight: () => slide(PREV),
+          // onSwiped: () => setInProp(inProp => !inProp),
+          onSwipedLeft: () => {slide(NEXT); setInProp(inProp => !inProp)},
+          onSwipedRight: () => {slide(PREV); setInProp(inProp => !inProp)},
           preventDefaultTouchmoveEvent: true,
           trackMouse: true
      })

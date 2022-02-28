@@ -7,7 +7,7 @@
 .page-appear-active,
 .page-enter.page-enter-active {
     opacity: 1;
-    transition: opacity 300ms linear 150ms;
+    transition: opacity 700ms linear;
 }
 
 .page-exit {
@@ -16,42 +16,85 @@
 
 .page-exit.page-exit-active {
     opacity: 0;
-    transition: opacity 150ms linear;
+    transition: opacity 900ms linear;
+}
+
+// ALL PAGES
+
+// PLANET, CREW DESCRIPTION ANIMATION
+.DescriptionNode-enter{
+    opacity: 0;
+}
+.DescriptionNode-enter-active{
+    opacity: 1;
+    transition: opacity 1200ms;
+}
+.DescriptionNode-exit{
+    opacity: 1;
+}
+.DescriptionNode-exit-active{
+    opacity: 0;
+    transition: opacity 1000ms;
 }
 
 
-// DESTINATIONS PLANET TRANSITIONS
-
+// PLANET IMAGE TRANSITIONS
 .planetNode-enter {
-    opacity: 0;    
-    transform: translateX(- 150%) translateY(- 50%) scale(0.10) rotate(- 90deg);
-
+    
+    transform: translateX(- 150%) translateY(- 50%) scale(0.10) rotate(0);
 }
 .planetNode-enter-active {
-    opacity: 1;
+
     transform: translateX(0) translateY(0%) scale(1) rotate(0);
     transition: transform 1200ms;
 }
-.planetNode-enter-done {
-    animation: rotating 240s linear infinite;
-    @keyframes rotating {
-        0% { 
-            transform: rotate(0); 
-        }
-        100% { 
-            transform: rotate(360deg);
-        }
-    }
-}
 .planetNode-exit {
     transform: translateX(0) translateY(0%) scale(1) rotate(0);    
-    opacity: 0;
 }
 .planetNode-exit-active {
-    opacity: 1;
     z-index: -5;
-    transform: translateX(150%) translateY(30%) scale(0) rotate( 90deg);
+    transform: translateX(150%) translateY(30%) scale(0) rotate(0);
     transition: transform 900ms;
-
 }
 
+
+
+// CREW PAGE IMAGE TRANSITIONS
+.crewNode-enter {
+    opacity: 0;
+}
+
+.crewNode-enter-active {
+    opacity: 1;
+    transition: opacity 1200ms;
+}
+
+.crewNode-exit {
+    opacity: 1;
+}
+.crewNode-exit-active {
+    opacity: 0;
+    transition: opacity 900ms;
+}
+
+
+// TECHNO NODE TRANSITION
+.technoNode-enter {
+    opacity: 0;    
+    transform: translateX(150%);
+}
+.technoNode-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 1200ms;
+}
+.technoNode-exit {
+    transform: translateX(0);    
+    opacity: 1;
+}
+.technoNode-exit-active {
+    opacity: 0;
+    z-index: -5;
+    transform: translateX(150%);
+    transition: transform 900ms;
+}

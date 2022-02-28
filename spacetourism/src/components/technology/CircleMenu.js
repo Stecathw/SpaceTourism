@@ -7,13 +7,14 @@ import { getData } from '../util/GetData';
 
 function CircleMenu( { technology }) {
 
-     const { setCurrentTechno } = useContext( TechnoContext )
+     const { setCurrentTechno, setInProp } = useContext( TechnoContext )
 
      const [activeIndex, setActiveIndex] = useState(0)
 
      const handleClick = (technoName, btnID) => {
          setCurrentTechno(getData(technology, technoName))
          setActiveIndex(btnID)
+         setInProp(inProp => !inProp)
      }
      
      return (

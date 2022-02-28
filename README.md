@@ -125,16 +125,16 @@ Styled-component lib is realy usefull to handle dynamic styles behavior along wi
 
 
 - Working on perfomance and loading data and image ? (Lazy loading perhaps ?)
-  -> useReducer and dispacth for wipe events
-  -> Find out if they are more rerenders in my components than necessary since I used use Context and value are often change (normally only when window event, just in case... and by curiousity)
+  -> useReducer and dispacth for swipe events
+  -> Find out if they are more rerenders in my components than necessary since I used use Context and value are often changed (normally happens only when window event triggered, but just in case... and by curiousity)
 
 - UX side : 
   General transitions and animations. (A lot can be done, creativity here...)
-  Horizontal scrolling on tabs and submenu (as well as finger slide on mobile device) on all pages.
+  Horizontal scrolling on tabs and submenu (as well as finger slide on mobile device) on all page ?
 
-- Transitions between pages and 404 error page.
+- 404 error page.
 
-- Fixing vertical responsiveness and handling more screen sizes. (Really small width devices encounter a Y axis decentered .main div)
+- Fixing vertical responsiveness and handling more screen sizes. (Really small width devices encounter a X axis decentered .main div)
 
 - Creating params and url routes for tabs and submenus (I've tried it with react router dom but was locked since I didn't find how to pass an optional argument into path)
 

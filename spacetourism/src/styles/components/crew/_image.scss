@@ -1,5 +1,6 @@
 @media screen and (max-width: $breakpoint-desktop-max) {
      .image {
+          max-height: 100%;
           img {
                transform: translateX(10%);
                width: 90%;

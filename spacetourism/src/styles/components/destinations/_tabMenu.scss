@@ -3,13 +3,15 @@
         width: 20vw;
         height: toRem(34px);
         ul {
-            height: calc(100% - 3px);
+            height: 100%;
+            // height: calc(100% - 3px);
             text-decoration: none;
             display: flex;
             justify-content: space-between;
-            li {
+            li {                
                 height: 100%;
                 span {
+                    height: 100%;
                     font-family: Barlow Condensed;
                     font-style: normal;
                     font-weight: normal;
@@ -19,17 +21,31 @@
                     color: #D0D6F9;
                     text-transform: uppercase;
                 }
+                &::after {
+                    content: '';
+                    display: block;
+                    margin: auto;                    
+                    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+                    transform: scaleX(0) translateY(12.5px);
+                    transition: transform 250ms ease-in-out;
+                    z-index: 6;
+                }
+                &:hover::after {
+                    transform: scaleX(1) translateY(12.5px);
+                }
+                &.idle:hover {
+                    cursor: pointer;
+                    // @include Hover;
+                }
             }
-            .active {
+            .active {                
                 border-bottom: 3px solid white;
+                pointer-events: none;
                 span {
                     color: $color-3;
                 }
             }
-            li.idle:hover {
-                cursor: pointer;
-                @include Hover;
-            }
+
         }
     }
 }
