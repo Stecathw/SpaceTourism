@@ -41,19 +41,19 @@
 // PLANET IMAGE TRANSITIONS
 .planetNode-enter {
     
-    transform: translateX(- 150%) translateY(- 50%) scale(0.10) rotate(0);
+    transform: translateX(- 150%) translateY(- 50%) scale(0);
 }
 .planetNode-enter-active {
 
-    transform: translateX(0) translateY(0%) scale(1) rotate(0);
+    transform: translateX(0) translateY(0%) scale(1);
     transition: transform 1200ms;
 }
 .planetNode-exit {
-    transform: translateX(0) translateY(0%) scale(1) rotate(0);    
+    transform: translateX(0) translateY(0%) scale(1);    
 }
 .planetNode-exit-active {
     z-index: -5;
-    transform: translateX(150%) translateY(30%) scale(0) rotate(0);
+    transform: translateX(150%) translateY(30%) scale(0);
     transition: transform 900ms;
 }
 

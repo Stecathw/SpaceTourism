@@ -22,6 +22,7 @@
                 // .box COULD BE REMOVED LIKE ON PAGES Technology and Crew
                 .box {
                     width: 31vw;
+                    // touch-action: 'pan-y';
                     @import '../components/destinations/tabMenu';
                     @import '../components/destinations/description';
                 }

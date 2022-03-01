@@ -54,8 +54,12 @@
 
 @media screen and (max-width: $breakpoint-mobile-max) {
      .member-infos {
-          width: 327px;
+          width: 66vw;
           margin-top: 32px;
+          .member-name {
+               display: flex;
+               justify-content: center;
+          }
           .member-bio { 
                   
                p {

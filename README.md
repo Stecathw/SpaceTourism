@@ -91,7 +91,9 @@ Used this tutorial to make things faster and easier. I want to focus more on res
 
 20 - Added swipe feature to crew page. NB as a choice and not to rewright everything, only swiping on menu and text is possible (a box with both content). Images aren't listening to window events.
 
-21 - Added react transition group package to add animations and transitions especially between views (https://css-tricks.com/animating-between-views-in-react/)  
+21 - Added react transition group package to add animations and transitions especially between views.  
+
+22 - Fixed trouble with animations and swipe events. Find work around to make responsive things under 300px.
 
 
 ### Built with
@@ -108,7 +110,9 @@ Used this tutorial to make things faster and easier. I want to focus more on res
 
 ### What I learned
 
-I've learned that it is not as easy to make things look like the figma design. I had to think about architecture and design patterns to break things into components and keep the whole project as simple as I can and not that messy. Many design choices are then bring to interpretations Sometimes I had to came back on my initial approach to achieve what I intented to do. I made a lot of back and forth between figma and website under developments and still they are lot of interpretation a single figma graphism can't solve alone. (missing communication with a team ? between UI/UX and dev ?!) For instance how should behave components with responsiveness ?
+I've learned that it is not as easy to make things look like the figma design. I had to think about architecture and design patterns to break things into components and keep the whole project as simple as I can and not that messy. Many design choices are then bring to interpretations. Sometimes I had to came back on my initial approach to achieve what I intented to do. 
+
+I made a lot of back and forth between figma and website under development and still they are lot of interpretation a single figma graphism can't solve alone. (missing communication with a team ? between UI/UX and dev ?) For instance how should behave components with responsiveness ? So most of the page gots their values fixed with pixels and not that much rem, em, vh, vw. Instead, these fixed value are keeping the layouts as close as possible to the 3 given devices size from the figma skecth. On those devices I am pretty sure things are like and where they should be. (mobile: 365x667, tablet: 768x1024, desktop: 1440x900)
 
 I've learned useContext along with CreateContext and Provider Context. (Redux was a bit too much for this app)
 As I've many times faced trouble when managing states while breaking aparts a page into components I need useContext to makes things easier but not to complex. 
@@ -121,22 +125,26 @@ Even if I've used grid and flexbox in previous projects, I guess I gained deeper
 
 Styled-component lib is realy usefull to handle dynamic styles behavior along with states.
 
+And finally I tried react-transition-group for animations and React swipeable to make window event on mobile device especially. 
+
 ### Continued development
 
 
 - Working on perfomance and loading data and image ? (Lazy loading perhaps ?)
   -> useReducer and dispacth for swipe events
-  -> Find out if they are more rerenders in my components than necessary since I used use Context and value are often changed (normally happens only when window event triggered, but just in case... and by curiousity)
 
 - UX side : 
-  General transitions and animations. (A lot can be done, creativity here...)
+  General transitions and animations. 
   Horizontal scrolling on tabs and submenu (as well as finger slide on mobile device) on all page ?
+  Adding swipe possibility to the last technology page.
 
 - 404 error page.
 
-- Fixing vertical responsiveness and handling more screen sizes. (Really small width devices encounter a X axis decentered .main div)
+- Fixing vertical responsiveness and handling more screen sizes. (Really small width devices encounter a X axis decentered .main div) Converting units as explained before from px to relative ones could help also. Moreover I should have work my way on mobile first of all (Mobile first design!!).
 
 - Creating params and url routes for tabs and submenus (I've tried it with react router dom but was locked since I didn't find how to pass an optional argument into path)
+
+- Working on "Warning: findDOMNode is deprecated in StrictMode. findDOMNode was passed an instance of Transition which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node" coming from Transition group using findDOMNode.
 
 ### Useful resources
 
